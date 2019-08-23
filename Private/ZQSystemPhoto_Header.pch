@@ -1,0 +1,19 @@
+//
+//  PrefixHeader.pch
+//  ZQSystemPhotoDemo
+//
+//  Created by caozhiqiang on 2019/8/14.
+//  Copyright © 2019 caozhiqiang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "ZQDefine.h"
+#import "UIKitExtension.h"
+#import "ZQHelper.h"
+
+#import "ZQCommonCell.h"
+#import "ZQCommonView.h"
+
+#endif /* PrefixHeader_pch */

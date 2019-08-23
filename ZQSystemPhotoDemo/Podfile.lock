@@ -1,0 +1,16 @@
+PODS:
+  - ZQSystemPhoto (1.0.0)
+
+DEPENDENCIES:
+  - ZQSystemPhoto (from `../`)
+
+EXTERNAL SOURCES:
+  ZQSystemPhoto:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZQSystemPhoto: 72a62e5eaa69c00cff7838555847fe8aae25d865
+
+PODFILE CHECKSUM: fd9f9a98689046bf91259451d466d04052c82a30
+
+COCOAPODS: 1.7.5

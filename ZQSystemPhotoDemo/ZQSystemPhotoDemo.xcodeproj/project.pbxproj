@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B41C85A2303B56C00A73372 /* ZQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C8592303B56C00A73372 /* ZQAppDelegate.m */; };
+		2B41C85D2303B56C00A73372 /* ZQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C85C2303B56C00A73372 /* ZQViewController.m */; };
+		2B41C8622303B58200A73372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B41C8612303B58200A73372 /* Assets.xcassets */; };
+		2B41C8652303B58200A73372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B41C8632303B58200A73372 /* LaunchScreen.storyboard */; };
+		2B41C8682303B58200A73372 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B41C8672303B58200A73372 /* main.m */; };
+		6CCC775DBFC9D73D6D726A33 /* libPods-ZQSystemPhotoDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DADEFD7886806566E08A40 /* libPods-ZQSystemPhotoDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17DADEFD7886806566E08A40 /* libPods-ZQSystemPhotoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZQSystemPhotoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B41C8552303B56B00A73372 /* ZQSystemPhotoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZQSystemPhotoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B41C8582303B56C00A73372 /* ZQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQAppDelegate.h; sourceTree = "<group>"; };
+		2B41C8592303B56C00A73372 /* ZQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQAppDelegate.m; sourceTree = "<group>"; };
+		2B41C85B2303B56C00A73372 /* ZQViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZQViewController.h; sourceTree = "<group>"; };
+		2B41C85C2303B56C00A73372 /* ZQViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZQViewController.m; sourceTree = "<group>"; };
+		2B41C8612303B58200A73372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B41C8642303B58200A73372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2B41C8662303B58200A73372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B41C8672303B58200A73372 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D3E14E04B9DBC63DD64DD96 /* Pods-ZQSystemPhotoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQSystemPhotoDemo.debug.xcconfig"; path = "Target Support Files/Pods-ZQSystemPhotoDemo/Pods-ZQSystemPhotoDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7CE4035A8E7A757F693FDECB /* Pods-ZQSystemPhotoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZQSystemPhotoDemo.release.xcconfig"; path = "Target Support Files/Pods-ZQSystemPhotoDemo/Pods-ZQSystemPhotoDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A82B34C83FFC465C0F8AA416 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CCC775DBFC9D73D6D726A33 /* libPods-ZQSystemPhotoDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B41C84C2303B56B00A73372 = {
+			isa = PBXGroup;
+			children = (
+				2B41C8572303B56B00A73372 /* ZQSystemPhotoDemo */,
+				2B41C8562303B56B00A73372 /* Products */,
+				38F08E40D012DCA3A9BC110E /* Pods */,
+				3E8F6C8703C0D6EF4C704E64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2B41C8562303B56B00A73372 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B41C8552303B56B00A73372 /* ZQSystemPhotoDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2B41C8572303B56B00A73372 /* ZQSystemPhotoDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2B41C86E2303B66900A73372 /* ZQAppDelegate */,
+				2B41C8712303B76000A73372 /* Controller */,
+				2B41C86F2303B68600A73372 /* Support File */,
+			);
+			path = ZQSystemPhotoDemo;
+			sourceTree = "<group>";
+		};
+		2B41C86E2303B66900A73372 /* ZQAppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2B41C8582303B56C00A73372 /* ZQAppDelegate.h */,
+				2B41C8592303B56C00A73372 /* ZQAppDelegate.m */,
+			);
+			path = ZQAppDelegate;
+			sourceTree = "<group>";
+		};
+		2B41C86F2303B68600A73372 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				2B41C8612303B58200A73372 /* Assets.xcassets */,
+				2B41C8632303B58200A73372 /* LaunchScreen.storyboard */,
+				2B41C8662303B58200A73372 /* Info.plist */,
+				2B41C8672303B58200A73372 /* main.m */,
+			);
+			name = "Support File";
+			sourceTree = "<group>";
+		};
+		2B41C8712303B76000A73372 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B41C85B2303B56C00A73372 /* ZQViewController.h */,
+				2B41C85C2303B56C00A73372 /* ZQViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		38F08E40D012DCA3A9BC110E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D3E14E04B9DBC63DD64DD96 /* Pods-ZQSystemPhotoDemo.debug.xcconfig */,
+				7CE4035A8E7A757F693FDECB /* Pods-ZQSystemPhotoDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E8F6C8703C0D6EF4C704E64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17DADEFD7886806566E08A40 /* libPods-ZQSystemPhotoDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2B41C8542303B56B00A73372 /* ZQSystemPhotoDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B41C86B2303B58200A73372 /* Build configuration list for PBXNativeTarget "ZQSystemPhotoDemo" */;
+			buildPhases = (
+				FE8BF02D8F16DA63278B4200 /* [CP] Check Pods Manifest.lock */,
+				2B41C8512303B56B00A73372 /* Sources */,
+				2B41C8532303B56B00A73372 /* Resources */,
+				A82B34C83FFC465C0F8AA416 /* Frameworks */,
+				54CB9B1138D821560B6F4075 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZQSystemPhotoDemo;
+			productName = ZQSystemPhotoDemo;
+			productReference = 2B41C8552303B56B00A73372 /* ZQSystemPhotoDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2B41C84D2303B56B00A73372 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = caozhiqiang;
+				TargetAttributes = {
+					2B41C8542303B56B00A73372 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 2B41C8502303B56B00A73372 /* Build configuration list for PBXProject "ZQSystemPhotoDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2B41C84C2303B56B00A73372;
+			productRefGroup = 2B41C8562303B56B00A73372 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2B41C8542303B56B00A73372 /* ZQSystemPhotoDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B41C8532303B56B00A73372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41C8652303B58200A73372 /* LaunchScreen.storyboard in Resources */,
+				2B41C8622303B58200A73372 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54CB9B1138D821560B6F4075 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZQSystemPhotoDemo/Pods-ZQSystemPhotoDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZQSystemPhotoDemo/Pods-ZQSystemPhotoDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZQSystemPhotoDemo/Pods-ZQSystemPhotoDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8BF02D8F16DA63278B4200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZQSystemPhotoDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2B41C8512303B56B00A73372 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B41C85D2303B56C00A73372 /* ZQViewController.m in Sources */,
+				2B41C8682303B58200A73372 /* main.m in Sources */,
+				2B41C85A2303B56C00A73372 /* ZQAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2B41C8632303B58200A73372 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B41C8642303B58200A73372 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2B41C8692303B58200A73372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2B41C86A2303B58200A73372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B41C86C2303B58200A73372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D3E14E04B9DBC63DD64DD96 /* Pods-ZQSystemPhotoDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XGASPGR8DQ;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = ZQSystemPhotoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanmei.ZQSystemPhotoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2B41C86D2303B58200A73372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CE4035A8E7A757F693FDECB /* Pods-ZQSystemPhotoDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XGASPGR8DQ;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = ZQSystemPhotoDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wanmei.ZQSystemPhotoDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2B41C8502303B56B00A73372 /* Build configuration list for PBXProject "ZQSystemPhotoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B41C8692303B58200A73372 /* Debug */,
+				2B41C86A2303B58200A73372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B41C86B2303B58200A73372 /* Build configuration list for PBXNativeTarget "ZQSystemPhotoDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B41C86C2303B58200A73372 /* Debug */,
+				2B41C86D2303B58200A73372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2B41C84D2303B56B00A73372 /* Project object */;
+}
