@@ -43,9 +43,6 @@ Pod::Spec.new do |s|
   # 全局头文件
   s.prefix_header_file = 'Private/ZQSystemPhoto_Header.pch'
 
-  # 代码文件
-  s.source_files  = "Core/*.{h,m}", 'Private/**/*.{h,m}'
-
   # 资源文件
   s.resources = 'Private/Resources/*.{png}'
 
@@ -54,5 +51,28 @@ Pod::Spec.new do |s|
 
   # 支持的最低版本
   s.ios.deployment_target = '9.0'
+
+
+  s.subspec 'Core' do |core|
+    core.source_files = 'Core/*.{h,m}'
+  end
+
+  s.subspec 'Private' do |p|
+      p.subspec 'Controller' do |vc|
+        vc.source_files = 'Private/Controller/*.{h,m}'
+      end    
+
+      p.subspec 'Manager' do |vc|
+        vc.source_files = 'Private/Manager/*.{h,m}'
+      end    
+       
+      p.subspec 'Other' do |other|
+        other.source_files = 'Private/Other/*.{h,m}'
+      end
+
+      p.subspec 'View' do |view|
+        view.source_files = 'Private/View/*.{h,m}'
+      end
+  end
 
 end

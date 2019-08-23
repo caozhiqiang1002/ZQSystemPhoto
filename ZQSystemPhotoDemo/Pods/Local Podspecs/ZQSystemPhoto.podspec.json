@@ -18,13 +18,36 @@
   "public_header_files": "Core/*.{h}",
   "private_header_files": "Private/**/*.{h}",
   "prefix_header_file": "Private/ZQSystemPhoto_Header.pch",
-  "source_files": [
-    "Core/*.{h,m}",
-    "Private/**/*.{h,m}"
-  ],
   "resources": "Private/Resources/*.{png}",
   "requires_arc": true,
   "platforms": {
     "ios": "9.0"
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Core/*.{h,m}"
+    },
+    {
+      "name": "Private",
+      "subspecs": [
+        {
+          "name": "Controller",
+          "source_files": "Private/Controller/*.{h,m}"
+        },
+        {
+          "name": "Manager",
+          "source_files": "Private/Manager/*.{h,m}"
+        },
+        {
+          "name": "Other",
+          "source_files": "Private/Other/*.{h,m}"
+        },
+        {
+          "name": "View",
+          "source_files": "Private/View/*.{h,m}"
+        }
+      ]
+    }
+  ]
 }
