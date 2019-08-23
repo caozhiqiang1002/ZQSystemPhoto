@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.name         = "ZQSystemPhoto"
  
   # 组件版本号
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
  
   # 组件简介
   s.summary      = "访问系统相册的组件"
