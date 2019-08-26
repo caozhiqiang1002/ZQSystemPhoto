@@ -1,17 +1,17 @@
 PODS:
-  - ZQSystemPhoto (1.0.0):
-    - ZQSystemPhoto/Core (= 1.0.0)
-    - ZQSystemPhoto/Private (= 1.0.0)
-  - ZQSystemPhoto/Core (1.0.0)
-  - ZQSystemPhoto/Private (1.0.0):
-    - ZQSystemPhoto/Private/Controller (= 1.0.0)
-    - ZQSystemPhoto/Private/Manager (= 1.0.0)
-    - ZQSystemPhoto/Private/Other (= 1.0.0)
-    - ZQSystemPhoto/Private/View (= 1.0.0)
-  - ZQSystemPhoto/Private/Controller (1.0.0)
-  - ZQSystemPhoto/Private/Manager (1.0.0)
-  - ZQSystemPhoto/Private/Other (1.0.0)
-  - ZQSystemPhoto/Private/View (1.0.0)
+  - ZQSystemPhoto (1.0.1):
+    - ZQSystemPhoto/Core (= 1.0.1)
+    - ZQSystemPhoto/Private (= 1.0.1)
+  - ZQSystemPhoto/Core (1.0.1)
+  - ZQSystemPhoto/Private (1.0.1):
+    - ZQSystemPhoto/Private/Controller (= 1.0.1)
+    - ZQSystemPhoto/Private/Manager (= 1.0.1)
+    - ZQSystemPhoto/Private/Other (= 1.0.1)
+    - ZQSystemPhoto/Private/View (= 1.0.1)
+  - ZQSystemPhoto/Private/Controller (1.0.1)
+  - ZQSystemPhoto/Private/Manager (1.0.1)
+  - ZQSystemPhoto/Private/Other (1.0.1)
+  - ZQSystemPhoto/Private/View (1.0.1)
 
 DEPENDENCIES:
   - ZQSystemPhoto (from `../`)
@@ -21,7 +21,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZQSystemPhoto: 78fe34a92b986c31c76a51ac765e42fba1fc2752
+  ZQSystemPhoto: 70f28df96e280a0cbb9963461ff32a49018b8220
 
 PODFILE CHECKSUM: fd9f9a98689046bf91259451d466d04052c82a30
 

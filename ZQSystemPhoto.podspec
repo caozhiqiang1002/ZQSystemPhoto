@@ -34,12 +34,6 @@ Pod::Spec.new do |s|
   # 组件资源链接
   s.source       = { :git => "https://github.com/caozhiqiang1002/ZQSystemPhoto.git", :tag => "#{s.version}" }
 
-  # 公共头文件
-  s.public_header_files = 'Core/*.{h}'
-
-  # 私有头文件
-  s.private_header_files = 'Private/**/*.{h}'
-
   # 全局头文件
   s.prefix_header_file = 'Private/ZQSystemPhoto_Header.pch'
 
@@ -54,25 +48,30 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Core' do |core|
+    core.public_header_files = 'Core/*.{h}'
     core.source_files = 'Core/*.{h,m}'
   end
 
   s.subspec 'Private' do |p|
-      p.subspec 'Controller' do |vc|
-        vc.source_files = 'Private/Controller/*.{h,m}'
-      end    
+    p.subspec 'Controller' do |vc|
+      vc.private_header_files = 'Private/Controller/*.{h}'
+      vc.source_files = 'Private/Controller/*.{h,m}'
+    end    
 
-      p.subspec 'Manager' do |vc|
-        vc.source_files = 'Private/Manager/*.{h,m}'
-      end    
-       
-      p.subspec 'Other' do |other|
-        other.source_files = 'Private/Other/*.{h,m}'
-      end
+    p.subspec 'Manager' do |mgr|
+      mgr.private_header_files = 'Private/Manager/*.{h}'
+      mgr.source_files = 'Private/Manager/*.{h,m}'
+    end    
+     
+    p.subspec 'Other' do |other|
+      other.private_header_files = 'Private/Other/*.{h}'
+      other.source_files = 'Private/Other/*.{h,m}'
+    end
 
-      p.subspec 'View' do |view|
-        view.source_files = 'Private/View/*.{h,m}'
-      end
+    p.subspec 'View' do |view|
+      view.private_header_files = 'Private/View/*.{h}'
+      view.source_files = 'Private/View/*.{h,m}'
+    end
   end
 
 end

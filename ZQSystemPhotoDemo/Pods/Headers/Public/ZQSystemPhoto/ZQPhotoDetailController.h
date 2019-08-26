@@ -1,1 +1,0 @@
-../../../../../Private/Controller/ZQPhotoDetailController.h
