@@ -89,7 +89,9 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
     self.collectionView.delegate = self;
     [self.view addSubview:self.collectionView];
     
-    [self.collectionView registerClass:[ZQPhotoCell class] forCellWithReuseIdentifier:ZQ_Photo_CellID];
+    [self.collectionView registerClass:[ZQPhotoCell class]
+            forCellWithReuseIdentifier:ZQ_Photo_CellID];
+    
     [self.collectionView registerClass:[UICollectionReusableView class]
             forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:ZQ_Photo_HeaderID];
