@@ -69,13 +69,11 @@ static NSString  * const Photo_Album_CellID = @"Photo_Album_CellID";
     ZQDataSourceCompletion completion = ^(id item, NSIndexPath *indexPath, id cell) {
         ZQFetchAlbumInfoModel *model = (ZQFetchAlbumInfoModel *)item;
         if ([model.title isEqualToString:@"所有照片"]) {
-            [[ZQPhotoAlbumManager sharedInstance] getWholePhotoList:^(NSArray * _Nullable photos) {
-                [((ZQPhotoAlbumCell *)cell) handleData:model.title images:photos];
-            }];
+            NSArray *photos = [[ZQPhotoAlbumManager sharedInstance] getWholePhotoList];
+            [((ZQPhotoAlbumCell *)cell) handleData:model.title images:photos];
         }else{
-            [[ZQPhotoAlbumManager sharedInstance] getPhotoList:model completion:^(NSArray * _Nullable photos) {
-                [((ZQPhotoAlbumCell *)cell) handleData:model.title images:photos];
-            }];
+            NSArray *photos = [[ZQPhotoAlbumManager sharedInstance] getPhotoList:model];
+            [((ZQPhotoAlbumCell *)cell) handleData:model.title images:photos];
         }
     };
     
@@ -86,18 +84,17 @@ static NSString  * const Photo_Album_CellID = @"Photo_Album_CellID";
 }
 
 - (void)getPhotoAlbumsData {
-    [[ZQPhotoAlbumManager sharedInstance] getPhotoAlbumList:^(NSArray * _Nullable photoAlbums, BOOL isAuthorized) {
-        zq_dispatch_main_async_safe(^{
-            if (isAuthorized) {
-                NSMutableArray *albums = [[NSMutableArray alloc] initWithArray:photoAlbums];
-                ZQFetchAlbumInfoModel *wholeModel = [ZQFetchAlbumInfoModel modelWithTitle:@"所有照片" result:nil];
-                [albums insertObject:wholeModel atIndex:0];
-                [self.dataSource updateData:albums];
-                [self.tableView reloadData];
-            }else{
-                [self showNotAuthorizedWarning];
-            }
-        })
+    [[ZQPhotoAlbumManager sharedInstance] requestAuthorization:^(BOOL isAuthorized) {
+        if (isAuthorized) {
+            NSArray *photoAlbums = [[ZQPhotoAlbumManager sharedInstance] getPhotoAlbumList];
+            NSMutableArray *albums = [[NSMutableArray alloc] initWithArray:photoAlbums];
+            ZQFetchAlbumInfoModel *wholeModel = [ZQFetchAlbumInfoModel modelWithTitle:@"所有照片" result:nil];
+            [albums insertObject:wholeModel atIndex:0];
+            [self.dataSource updateData:albums];
+            [self.tableView reloadData];
+        }else{
+            [self showNotAuthorizedWarning];
+        }
     }];
 }
 

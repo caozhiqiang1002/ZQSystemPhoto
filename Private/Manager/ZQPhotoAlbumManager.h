@@ -12,36 +12,38 @@
 
 @interface ZQPhotoAlbumManager : NSObject
 
-@property (nonatomic, strong) ZQPhotoListConfig *config;
+@property (nonatomic, strong, nonnull) ZQPhotoListConfig *config;
 
-@property (nonatomic, copy) ZQHandleResult handleResult;
+@property (nonatomic, copy, nonnull) ZQHandleResult handleResult;
 
 /**
  * @brief 单例对象
  */
-+ (instancetype)sharedInstance;
++ (instancetype __nonnull)sharedInstance;
+
+/**
+ * @brief 请求权限
+ *
+ * @param completion 结果毁掉
+ */
+- (void)requestAuthorization:(void(^ __nullable)(BOOL isAuthorized))completion;
 
 /**
  * @brief 获取相册列表
- *
- * @param completion 结果回调
  */
-- (void)getPhotoAlbumList:(void(^)(NSArray * __nullable photoAlbums, BOOL isAuthorized))completion;
+- (NSArray * __nullable)getPhotoAlbumList;
 
 /**
  * @brief 获取某个相册下的所有照片
  *
  * @param model      相册模型对象
- * @param completion 完成回调
  */
-- (void)getPhotoList:(ZQFetchAlbumInfoModel *)model completion:(void(^)(NSArray * __nullable photos))completion;
+- (NSArray * __nullable)getPhotoList:(ZQFetchAlbumInfoModel * __nullable)model;
 
 /**
  * @brief 获取所有图片
- *
- * @param completion 完成回调
  */
-- (void)getWholePhotoList:(void(^)(NSArray * __nullable photos))completion;
+- (NSArray * __nullable)getWholePhotoList;
 
 @end
 

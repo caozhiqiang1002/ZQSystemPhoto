@@ -191,6 +191,8 @@
                                                handler:^(UIImage *image, NSDictionary *imageInfo) {
                                                    self.iconImageView.image = image;
                                                }];
+    
+    [self setNeedsLayout];
 }
 
 @end

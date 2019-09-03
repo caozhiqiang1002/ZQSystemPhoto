@@ -26,6 +26,10 @@
     [[ZQSystemPhotoAPI sharedAPI] showSystemPhoto:self config:nil handler:^(NSArray<NSDictionary *> *imagesInfo) {
         NSLog(@"%@", imagesInfo);
     }];
+    
+//    [[ZQSystemPhotoAPI sharedAPI] showSystemPhotoAlbum:self config:nil handler:^(NSArray<NSDictionary *> *imagesInfo) {
+//        NSLog(@"%@", imagesInfo);
+//    }];
 }
 
 @end

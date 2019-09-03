@@ -121,33 +121,53 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
 }
 
 - (void)getPhotoListData {
-    
     @zq_weakify(self);
-    if (self.model) {
-        [[ZQPhotoAlbumManager sharedInstance] getPhotoList:self.model completion:^(NSArray * _Nullable photos) {
-            @zq_strongify(self);
-            [ZQPhotoAlbumManager sharedInstance].config = [ZQPhotoListConfig configWithWholeAssets:photos];
-            [self.dataSource updateData:photos];
-            [self.collectionView reloadData];
-        }];
-    } else {
-        [[ZQPhotoAlbumManager sharedInstance] getWholePhotoList:^(NSArray * _Nullable photos) {
-            @zq_strongify(self);
-            [ZQPhotoAlbumManager sharedInstance].config = [ZQPhotoListConfig configWithWholeAssets:photos];
-            [self.dataSource updateData:photos];
-            [self.collectionView reloadData];
-        }];
-    }
+    [[ZQPhotoAlbumManager sharedInstance] requestAuthorization:^(BOOL isAuthorized) {
+        if (isAuthorized) {
+            if (self.model) {
+                @zq_strongify(self);
+                NSArray *photos = [[ZQPhotoAlbumManager sharedInstance] getPhotoList:self.model];
+                [ZQPhotoAlbumManager sharedInstance].config = [ZQPhotoListConfig configWithWholeAssets:photos];
+                [self.dataSource updateData:photos];
+                [self.collectionView reloadData];
+            } else {
+                NSArray *photos = [[ZQPhotoAlbumManager sharedInstance] getWholePhotoList];
+                [ZQPhotoAlbumManager sharedInstance].config = [ZQPhotoListConfig configWithWholeAssets:photos];
+                [self.dataSource updateData:photos];
+                [self.collectionView reloadData];
+            }
+        }else{
+            [self showNotAuthorizedWarning];
+        }
+    }];
 }
 
 - (void)setChildVCForNavigationVC {
     NSMutableArray *childVCs = [[NSMutableArray alloc] initWithArray:self.navigationController.childViewControllers];
-    ZQPhotoAlbumController *albumVC = [[ZQPhotoAlbumController alloc] init];
-    [childVCs insertObject:albumVC atIndex:0];
+    for (UIViewController *childVC in childVCs) {
+        if (![childVC isKindOfClass:[ZQPhotoAlbumController class]]) {
+            ZQPhotoAlbumController *albumVC = [[ZQPhotoAlbumController alloc] init];
+            [childVCs insertObject:albumVC atIndex:0];
+        }
+    }
     self.navigationController.viewControllers = childVCs;
 }
 
 #pragma mark - Private
+
+- (void)showNotAuthorizedWarning {
+    [UIAlertController settingAlertWithTitle:nil
+                                     message:@"想要选择图片，需要修改访问照片设置"
+                                      target:self
+                                  completion:^(BOOL isSure) {
+                                      if (isSure) {
+                                          NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                                          if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                                              [[UIApplication sharedApplication] openURL:url];
+                                          }
+                                      }
+                                  }];
+}
 
 - (void)updateCellStatus:(ZQPhotoCell *)cell indexPath:(NSIndexPath *)indexPath {
     ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
@@ -238,12 +258,13 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
 {
     NSMutableArray *assets = [NSMutableArray array];
     ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
-    
-    NSArray *layoutAttributes = [self.collectionView.collectionViewLayout layoutAttributesForElementsInRect:rect];
-    for (UICollectionViewLayoutAttributes *layoutAttr in layoutAttributes) {
-        NSIndexPath *indexPath = layoutAttr.indexPath;
-        PHAsset *asset = config.wholeAssets[indexPath.item];
-        [assets addObject:asset];
+    if (config.wholeAssets && config.wholeAssets.count > 0) {
+        NSArray *layoutAttributes = [self.collectionView.collectionViewLayout layoutAttributesForElementsInRect:rect];
+        for (UICollectionViewLayoutAttributes *layoutAttr in layoutAttributes) {
+            NSIndexPath *indexPath = layoutAttr.indexPath;
+            PHAsset *asset = config.wholeAssets[indexPath.item];
+            [assets addObject:asset];
+        }
     }
     return assets;
 }

@@ -375,7 +375,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wanmei.ZQSystemPhotoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = systemPhoto.sec.wanmei.net;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = TeamDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -396,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wanmei.ZQSystemPhotoDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = systemPhoto.sec.wanmei.net;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = TeamDev;
 				TARGETED_DEVICE_FAMILY = "1,2";

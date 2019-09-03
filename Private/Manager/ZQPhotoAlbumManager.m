@@ -22,53 +22,47 @@
 
 #pragma mark - Public
 
-- (void)getPhotoAlbumList:(void (^)(NSArray * _Nullable, BOOL))completion {
-    @zq_weakify(self);
-    [self requestAuthorization:^(BOOL isAuthorized) {
-        @zq_strongify(self);
-        if (isAuthorized) {
-            NSMutableArray *photoAlbums = [[NSMutableArray alloc] init];
-            [photoAlbums addObjectsFromArray:[self getPhotoAlbumsForFetchResult:[self getSmartAlbum]]];
-            [photoAlbums addObjectsFromArray:[self getPhotoAlbumsForFetchResult:[self getUserCustomeAlbum]]];
+- (void)requestAuthorization:(void(^)(BOOL isAuthorized))completion {
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        zq_dispatch_main_async_safe(^{
             if (completion) {
-                completion(photoAlbums, YES);
+                completion(status == PHAuthorizationStatusAuthorized);
             }
-        }else{
-            completion(nil, NO);
-        }
+        });
     }];
 }
 
-- (void)getPhotoList:(ZQFetchAlbumInfoModel *)model completion:(void (^)(NSArray * _Nullable))completion {
+- (NSArray *)getPhotoAlbumList {
+    NSMutableArray *photoAlbums = [[NSMutableArray alloc] init];
+    [photoAlbums addObjectsFromArray:[self getPhotoAlbumsForFetchResult:[self getSmartAlbum]]];
+    [photoAlbums addObjectsFromArray:[self getPhotoAlbumsForFetchResult:[self getUserCustomeAlbum]]];
+    return photoAlbums;
+}
+
+- (NSArray *)getPhotoList:(ZQFetchAlbumInfoModel *)model{
     NSMutableArray *photos = [[NSMutableArray alloc] init];
-    
     for (PHAsset * asset in model.fetchResult) {
         [photos addObject:asset];
     }
-    completion ? completion(photos) : nil;
+    return photos;
 }
 
-- (void)getWholePhotoList:(void (^)(NSArray * _Nullable))completion {
-    
+- (NSArray *)getWholePhotoList {
     NSMutableArray *wholePhotos = [[NSMutableArray alloc] init];
     
     //智能相册
     NSArray *smartAlbums = [self getPhotoAlbumsForFetchResult:[self getSmartAlbum]];
     for (ZQFetchAlbumInfoModel *model in smartAlbums) {
-        [self getPhotoList:model completion:^(NSArray * _Nullable photos) {
-            [wholePhotos addObjectsFromArray:photos];
-        }];
+        [wholePhotos addObjectsFromArray:[self getPhotoList:model]];
     }
     
     //用户自定义相册
     NSArray *customAlbums = [self getPhotoAlbumsForFetchResult:[self getUserCustomeAlbum]];
     for (ZQFetchAlbumInfoModel *model in customAlbums) {
-        [self getPhotoList:model completion:^(NSArray * _Nullable photos) {
-            [wholePhotos addObjectsFromArray:photos];
-        }];
+        [wholePhotos addObjectsFromArray:[self getPhotoList:model]];
     }
     
-    completion ? completion(wholePhotos) : nil;
+    return wholePhotos;
 }
 
 #pragma mark - Private
@@ -79,15 +73,6 @@
     options.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:YES]];
     options.predicate = [NSPredicate predicateWithFormat:@"mediaType = %d", PHAssetMediaTypeImage];
     return options;
-}
-
-//获取访问照片库权限
-- (void)requestAuthorization:(void(^)(BOOL isAuthorized))completion {
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-        if (completion) {
-            completion(status == PHAuthorizationStatusAuthorized);
-        }
-    }];
 }
 
 //获取智能相册（该相册是系统自动生成的相册：任务、地点等相册名称）

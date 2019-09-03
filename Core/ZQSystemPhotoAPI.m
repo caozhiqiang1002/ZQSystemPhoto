@@ -9,6 +9,7 @@
 #import "ZQSystemPhotoAPI.h"
 #import "ZQPhotoListController.h"
 #import "ZQPhotoManager.h"
+#import "ZQPhotoAlbumController.h"
 
 @implementation ZQPhotoItemConfig
 
@@ -101,6 +102,32 @@
     ZQPhotoListController *listVC = [ZQPhotoListController showPhotoListVC:nil];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listVC];
+    [currentVC presentViewController:nav animated:YES completion:nil];
+}
+
+- (void)showSystemPhotoAlbum:(UIViewController *)currentVC handler:(ZQHandleResult)handler {
+    ZQPhotoItemConfig *config = [[ZQPhotoItemConfig alloc] init];
+    config.itemCount = 4;
+    config.itemSpace = 3.0f;
+    config.sectionSpace = 3.0f;
+    config.selectedMaxCount = 0;
+    
+    [self showSystemPhotoAlbum:currentVC config:config handler:handler];
+}
+
+- (void)showSystemPhotoAlbum:(UIViewController *)currentVC
+                      config:(ZQPhotoItemConfig *)config
+                     handler:(ZQHandleResult)handler {
+    if (!config) {
+        config = [[ZQPhotoItemConfig alloc] init];
+    }
+    
+    [ZQPhotoManager sharedInstance].config = config;
+    [ZQPhotoAlbumManager sharedInstance].handleResult = handler;
+    
+    ZQPhotoAlbumController *albumVC = [[ZQPhotoAlbumController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:albumVC];
     [currentVC presentViewController:nav animated:YES completion:nil];
 }
 

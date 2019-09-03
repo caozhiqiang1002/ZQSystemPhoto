@@ -41,8 +41,10 @@ typedef void(^ZQHandleResult)(NSArray <NSDictionary *>*imagesInfo);
  */
 + (ZQSystemPhotoAPI *)sharedAPI;
 
+#pragma mark - 首先显示照片列表页面
+
 /**
- * @brief 显示系统相册
+ * @brief 显示照片列表页面
  *
  * @note 采用默认组合方式（count => 4, itemSpace => 3.0, sectionSpace => 3.0）
  *
@@ -52,7 +54,7 @@ typedef void(^ZQHandleResult)(NSArray <NSDictionary *>*imagesInfo);
 - (void)showSystemPhoto:(UIViewController *)currentVC handler:(ZQHandleResult)handler;
 
 /**
- * @brief 显示系统相册
+ * @brief 显示照片列表页面
  *
  * @param currentVC    当前控制器
  * @param config       配置信息
@@ -60,5 +62,26 @@ typedef void(^ZQHandleResult)(NSArray <NSDictionary *>*imagesInfo);
  */
 - (void)showSystemPhoto:(UIViewController *)currentVC
                  config:(ZQPhotoItemConfig *)config handler:(ZQHandleResult)handler;
+
+
+#pragma mark - 首先显示相册列表页面
+
+/**
+ * @brief 显示相册列表页面
+ *
+ * @param currentVC 当前控制器
+ * @param handler   结果回调
+ */
+- (void)showSystemPhotoAlbum:(UIViewController *)currentVC handler:(ZQHandleResult)handler;
+
+/**
+ * @brief 显示相册列表页面
+ *
+ * @param currentVC    当前控制器
+ * @param config       配置信息
+ * @param handler      结果回调
+ */
+- (void)showSystemPhotoAlbum:(UIViewController *)currentVC
+                      config:(ZQPhotoItemConfig *)config handler:(ZQHandleResult)handler;
 
 @end
