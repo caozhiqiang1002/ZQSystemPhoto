@@ -79,9 +79,10 @@ typedef void(^ZQHandleResult)(NSArray <NSDictionary *>*imagesInfo);
  *
  * @param currentVC    当前控制器
  * @param config       配置信息
- * @param handler      结果回调
+ * @param handler      结果回调 
  */
 - (void)showSystemPhotoAlbum:(UIViewController *)currentVC
                       config:(ZQPhotoItemConfig *)config handler:(ZQHandleResult)handler;
 
 @end
+ 
