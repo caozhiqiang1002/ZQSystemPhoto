@@ -62,5 +62,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-.DS_Store
-ZQSystemPhotoDemo/.DS_Store
+*.DS_Store
+
