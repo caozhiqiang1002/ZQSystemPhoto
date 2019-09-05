@@ -3,39 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E4487F5C22C977E12C852A840F77B0 /* ZQSystemPhotoAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 54BF388121CC2B7F2DF4FE690EEC244B /* ZQSystemPhotoAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E5133DB6E29C1EAB17A9B7067F3DF2C /* ZQPhotoAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DBA6007BDD0EBB34882A0655D4EEDE /* ZQPhotoAlbumManager.m */; };
-		10E8870342ADEBC537BBC54813D74656 /* ZQPhotoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7433DF87B6B5CA7EC46BDB70754E8762 /* ZQPhotoManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		214024BEEC97BD206F83AC92F2DD4A71 /* ZQDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C030395C0910B340CFB25650E06571D4 /* ZQDataSource.m */; };
-		23105EE200D53A86D7B60CCC6E3B4E51 /* ZQPhotoAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B4FA2DBC880E052FDDF4BDF2BA574D /* ZQPhotoAlbumController.m */; };
-		2806A020A81499A7FF19DD9272961D23 /* UIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DCF7893C92A3B37D6A3A1CFA55F6A /* UIKitExtension.m */; };
-		3DF4918BE63EE83E068EDBED599A5EDC /* ZQBaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = A19C1E3AB204542A540CC43E46CFA533 /* ZQBaseController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3F8B1E3EA679D271C22287915283D3E4 /* UIKitExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = F7231CB892C2438B1FAC4BF7F4A972B2 /* UIKitExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4F67C269EB383927AC5912F87448B8D3 /* ZQDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = 19CE45E0D9BE2565E8CA0A4319F4A56B /* ZQDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		51E4A1EFD4AAEB8FA4971637D7FED8E7 /* ZQCommonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 045F4EA376E1D90815E8C9D2C8597870 /* ZQCommonView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5E9CA6D6352C83CE267955EA8CD45924 /* ZQCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3154365B906B8902DC8BFACF29B1E91B /* ZQCommon.m */; };
-		6085E5069C54DA4A0B9495B72B401A42 /* ZQSystemPhotoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5CFFB559B0B0695700C0B078BE33AB /* ZQSystemPhotoAPI.m */; };
-		61B1F614F63BA10E6698E063AF1886EB /* ZQPhotoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA0571AE3A280DB94847CB35CF17CC1 /* ZQPhotoDetailController.m */; };
-		6674EE73E0FAF65DFCA97B3E75E15709 /* ZQSystemPhoto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F071327831757D8BB374AE07CF53BE8 /* ZQSystemPhoto-dummy.m */; };
-		73BB45B8C07ED9EC0C522B0DE6138410 /* ZQPhotoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = B23B12647FF8716BB82FFFB9225003E8 /* ZQPhotoListController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		77059790130B7DAF9CD3E0C8E947BE18 /* ZQPhotoAlbumController.h in Headers */ = {isa = PBXBuildFile; fileRef = 81A3342D91DE48F8EF9E236FAA9F45FF /* ZQPhotoAlbumController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		8E9D170D98AD02576F260539329F9647 /* ZQCommonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C9170FC1B59E24466797C8FE61B1E909 /* ZQCommonCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9202C35FC1F90DF767891821BAE6D502 /* ZQDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F5F0A2269D6EFB0C567B14509A5895AA /* ZQDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9C1823A4881D0089A8C16A22D1C6B607 /* ZQCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = E56C2EAA54EFC39CA9788909A5B262E7 /* ZQCommonView.m */; };
-		A078752A7C7F168907EE9227190ABE9C /* ZQHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE312B80AC3448B63AA8F449B79D08F /* ZQHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A128E646D6C1C1F2F0B39FCF3247F2E1 /* ZQHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27E5FB745854CF8B2548D9FDAB99759D /* ZQHelper.m */; };
-		AE599902EC5F763F748265CC52AC4955 /* ZQPhotoAlbumManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FCFD3412BA1DE60E2C39F1EE59619BC /* ZQPhotoAlbumManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		AF29250207997410F0F51ED587B80C2A /* ZQBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1E30500A98340C208FCEB5E13F8FB7 /* ZQBaseController.m */; };
-		B3EEB4062EBE3F41C09D5102805452EA /* ZQPhotoDetailController.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DEB85BC540BEE3394E2B78CAA94BC5 /* ZQPhotoDetailController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B5C824BD7538548469F3E258E745FF13 /* ZQPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DEC83772562D55CEBA8E64A2C46CD9 /* ZQPhotoManager.m */; };
+		02C08EF64A6B20AA01685C25B76A7332 /* ZQDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 36CE42AC5DB30B97B4FE3D80319995F4 /* ZQDataSource.m */; };
+		05A777AE4E45D60495CA9573C8FA1BF7 /* UIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1FA8140236F8AAFB566F3AB3A70ABB /* UIKitExtension.m */; };
+		0BBE4B03E3FC735C97AE5B67BB53F3E1 /* ZQCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = DECB23B2EAF0BD67110F98CC98DA3607 /* ZQCommon.m */; };
+		158701A957EB02F2F8E623660A26A535 /* ZQSystemPhotoAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E359F56C4E0470F2FDC73EFB741BB632 /* ZQSystemPhotoAPI.m */; };
+		18648B01D984B8C331C01C0CCF00ACA2 /* ZQCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 996EF8573E807991CC447100F4BF2341 /* ZQCommonCell.m */; };
+		1B3E0C1C759B0FF37B01D81829129D24 /* ZQPhotoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 852C843942FF4E50D4626600F84BEE29 /* ZQPhotoListController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1BD46EFFBEC03A694F1402B30F6257A4 /* ZQCommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 847B159CD7EEBE68C0D97DECE007ACDB /* ZQCommonView.m */; };
+		2E7B33A0748A5FE91DCDA710C9E6BCDF /* ZQHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 314F168F342474BA0E30CAE777C52992 /* ZQHelper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30577FF167E4E168FA9CEAF0CB33D869 /* ZQSystemPhoto-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F327A54726C596CD0E1EE2E3DB3A1937 /* ZQSystemPhoto-dummy.m */; };
+		3847ACE4759EA5D95AAE4D39DE6D1309 /* ZQPhotoAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F39CC312357310517A0B729F9A69C901 /* ZQPhotoAlbumManager.m */; };
+		39A6ADDF514022D0E4668A8E8AB5DF76 /* ZQPhotoAlbumController.h in Headers */ = {isa = PBXBuildFile; fileRef = B0916BFB770067D73A009FF0E6277392 /* ZQPhotoAlbumController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4DC03A323CEDA34D48979E59613F1B53 /* ZQDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = A7AE24313E45C29664042C26DD1C5747 /* ZQDefine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5594BD1D40B280E8E6FFEBC03659BDF2 /* ZQPhotoAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5993611235F5843EE4EC90B1CEC98463 /* ZQPhotoAlbumController.m */; };
+		5ACE72C70D0768EC327BC527B1294874 /* ZQCommonCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C60F258ACF3E1A1BC7A96161C0A9263B /* ZQCommonCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FDDB375523B9B10B33B4B78366AB64A /* ZQBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CC1428A1E6C45F787281B5ED3E46E5 /* ZQBaseController.m */; };
+		66721F30152BAC0136C96380D7C0862B /* ZQDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 622E6A68FC65FD7CD0523B1C15BA9A8F /* ZQDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E80F0FEA875926FF1ABAFFB43D8953C /* ZQPhotoAlbumManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9BDAA412DA0FE60968B17E9F8D940D /* ZQPhotoAlbumManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		717A45E92EF09D5364815CAE5BD259AC /* ZQPhotoManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 58B1D30962F06178C1C631B7B0A3F533 /* ZQPhotoManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		72FA2B8827D05EDCB07E4186D9ED8BD9 /* ZQPhotoDetailController.h in Headers */ = {isa = PBXBuildFile; fileRef = 386FFF9005BC6CB6044A103D044E9722 /* ZQPhotoDetailController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		773796DB4B752CE413C7D729C9A5A5EC /* ZQPhotoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD2FBA572F733F2ED75DFC62EC95217 /* ZQPhotoListController.m */; };
+		8F2FFBACA56040C5B031A00B4B99EC6D /* ZQPhotoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195945431BD872F773003C07828DE9DE /* ZQPhotoDetailController.m */; };
+		9ADE98B69F7E28FC2A7B340538E4BDA9 /* ZQPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA48EA2F48AA89B78C41FFF43CC7343 /* ZQPhotoManager.m */; };
 		BA09E92AA6A5D88884254218E33C5CE4 /* Pods-ZQSystemPhotoDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB1373704B9BC30E9A5A549DFA59882 /* Pods-ZQSystemPhotoDemo-dummy.m */; };
-		BE1C5A300380BDF61ADDD2B49C7A1DB8 /* ZQCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E350BEC50F7ACF70C5C209668D0F2263 /* ZQCommonCell.m */; };
-		C282ECA7E27BE1FB362258A2C2C670C8 /* ZQCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CB6C4F9A101DA24E7BF6824F52AB9C0 /* ZQCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D991775F25E7F5D928DDE433713AD663 /* ZQPhotoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4022314B6E59572F5ABAA42D0D1BB9F5 /* ZQPhotoListController.m */; };
+		C3877ECF25C253BA75AB5C95D593B75D /* ZQCommonView.h in Headers */ = {isa = PBXBuildFile; fileRef = CA0AA50BE78344269F89DD88853BBB6C /* ZQCommonView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CD1C0690C3C9D860630412EAE95593CA /* ZQSystemPhotoAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 5105C2AC7BB56D427C013AB56E615B0B /* ZQSystemPhotoAPI.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DACB2146177763911C7A05FE571D3791 /* ZQCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 26F6D3A2F5887F1748390D1682B83FEE /* ZQCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DB190B3435A964CFCAC7BC72715AFF6D /* ZQBaseController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D85E27780B529F0506D3BEF88CC6647 /* ZQBaseController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF7D3FEAA641666534214FDD29A79954 /* UIKitExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 455F3F524694C76BC6C25A84C7695455 /* UIKitExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBF91A96E9829D2852F3350414FA27FF /* ZQHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA26018F8C3B1E49A895D3582F0E0C2 /* ZQHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,55 +49,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0079DB076A8FD18B2A6E8EC672920A6A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		025A5290508F81D1A06DEA7F9C3BE855 /* libZQSystemPhoto.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libZQSystemPhoto.a; path = libZQSystemPhoto.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		045F4EA376E1D90815E8C9D2C8597870 /* ZQCommonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQCommonView.h; path = Private/View/ZQCommonView.h; sourceTree = "<group>"; };
 		04F6914E4E6E5D22AE5A99B6B7E1E5C3 /* Pods-ZQSystemPhotoDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZQSystemPhotoDemo.release.xcconfig"; sourceTree = "<group>"; };
-		08DEC83772562D55CEBA8E64A2C46CD9 /* ZQPhotoManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQPhotoManager.m; path = Private/Manager/ZQPhotoManager.m; sourceTree = "<group>"; };
-		19CE45E0D9BE2565E8CA0A4319F4A56B /* ZQDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQDefine.h; path = Private/Other/ZQDefine.h; sourceTree = "<group>"; };
+		195945431BD872F773003C07828DE9DE /* ZQPhotoDetailController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQPhotoDetailController.m; sourceTree = "<group>"; };
+		1C457C932172741C1643AAD0F5AD6E77 /* ZQSystemPhoto_Header.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQSystemPhoto_Header.pch; path = Private/ZQSystemPhoto_Header.pch; sourceTree = "<group>"; };
+		21186D108F42A06560DA348D1463F648 /* select_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "select_white@3x.png"; path = "Private/Resources/select_white@3x.png"; sourceTree = "<group>"; };
 		26CE6A49DE76BDC3396A6DEB0584678B /* Pods-ZQSystemPhotoDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ZQSystemPhotoDemo-resources.sh"; sourceTree = "<group>"; };
-		27BCDEC4EA67CB6F35BEC8F19A5E0424 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		27E5FB745854CF8B2548D9FDAB99759D /* ZQHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQHelper.m; path = Private/Other/ZQHelper.m; sourceTree = "<group>"; };
-		3154365B906B8902DC8BFACF29B1E91B /* ZQCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQCommon.m; path = Private/Other/ZQCommon.m; sourceTree = "<group>"; };
-		40115085FDA7A354077BBE3B2F9FB551 /* select_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "select_white@3x.png"; path = "Private/Resources/select_white@3x.png"; sourceTree = "<group>"; };
-		4022314B6E59572F5ABAA42D0D1BB9F5 /* ZQPhotoListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQPhotoListController.m; path = Private/Controller/ZQPhotoListController.m; sourceTree = "<group>"; };
-		4296868B9F9D4967C100AD63710F3FB7 /* back_black@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_black@2x.png"; path = "Private/Resources/back_black@2x.png"; sourceTree = "<group>"; };
-		459E9E234E023499121206382B9561FE /* select_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "select_white@2x.png"; path = "Private/Resources/select_white@2x.png"; sourceTree = "<group>"; };
+		26F6D3A2F5887F1748390D1682B83FEE /* ZQCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQCommon.h; sourceTree = "<group>"; };
+		314F168F342474BA0E30CAE777C52992 /* ZQHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQHelper.h; sourceTree = "<group>"; };
+		36CE42AC5DB30B97B4FE3D80319995F4 /* ZQDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQDataSource.m; sourceTree = "<group>"; };
+		386FFF9005BC6CB6044A103D044E9722 /* ZQPhotoDetailController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQPhotoDetailController.h; sourceTree = "<group>"; };
+		3D85E27780B529F0506D3BEF88CC6647 /* ZQBaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQBaseController.h; sourceTree = "<group>"; };
+		431C96456676E1B0292099455ACF3430 /* ZQSystemPhoto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZQSystemPhoto.xcconfig; sourceTree = "<group>"; };
+		455F3F524694C76BC6C25A84C7695455 /* UIKitExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UIKitExtension.h; sourceTree = "<group>"; };
 		4E64E36F22C2BA5AA2655CBDFF5E7246 /* Pods-ZQSystemPhotoDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ZQSystemPhotoDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		54BF388121CC2B7F2DF4FE690EEC244B /* ZQSystemPhotoAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQSystemPhotoAPI.h; path = Core/ZQSystemPhotoAPI.h; sourceTree = "<group>"; };
-		58DEB85BC540BEE3394E2B78CAA94BC5 /* ZQPhotoDetailController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQPhotoDetailController.h; path = Private/Controller/ZQPhotoDetailController.h; sourceTree = "<group>"; };
-		5A7DCF7893C92A3B37D6A3A1CFA55F6A /* UIKitExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = UIKitExtension.m; path = Private/Other/UIKitExtension.m; sourceTree = "<group>"; };
-		5CB6C4F9A101DA24E7BF6824F52AB9C0 /* ZQCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQCommon.h; path = Private/Other/ZQCommon.h; sourceTree = "<group>"; };
-		6FCFD3412BA1DE60E2C39F1EE59619BC /* ZQPhotoAlbumManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQPhotoAlbumManager.h; path = Private/Manager/ZQPhotoAlbumManager.h; sourceTree = "<group>"; };
-		7433DF87B6B5CA7EC46BDB70754E8762 /* ZQPhotoManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQPhotoManager.h; path = Private/Manager/ZQPhotoManager.h; sourceTree = "<group>"; };
+		5105C2AC7BB56D427C013AB56E615B0B /* ZQSystemPhotoAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQSystemPhotoAPI.h; sourceTree = "<group>"; };
+		58B1D30962F06178C1C631B7B0A3F533 /* ZQPhotoManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQPhotoManager.h; sourceTree = "<group>"; };
+		5993611235F5843EE4EC90B1CEC98463 /* ZQPhotoAlbumController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQPhotoAlbumController.m; sourceTree = "<group>"; };
+		622E6A68FC65FD7CD0523B1C15BA9A8F /* ZQDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQDataSource.h; sourceTree = "<group>"; };
+		6C0353EA02CCD5F7700AAF91B0658127 /* select_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "select_white@2x.png"; path = "Private/Resources/select_white@2x.png"; sourceTree = "<group>"; };
+		6DD2FBA572F733F2ED75DFC62EC95217 /* ZQPhotoListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQPhotoListController.m; sourceTree = "<group>"; };
+		6EA48EA2F48AA89B78C41FFF43CC7343 /* ZQPhotoManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQPhotoManager.m; sourceTree = "<group>"; };
+		7246C985E8863DEAE870AD9C145E274F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		75A6C3054AC8B9C57BE0ABE96CC138BA /* libPods-ZQSystemPhotoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-ZQSystemPhotoDemo.a"; path = "libPods-ZQSystemPhotoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78B4FA2DBC880E052FDDF4BDF2BA574D /* ZQPhotoAlbumController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQPhotoAlbumController.m; path = Private/Controller/ZQPhotoAlbumController.m; sourceTree = "<group>"; };
-		81A3342D91DE48F8EF9E236FAA9F45FF /* ZQPhotoAlbumController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQPhotoAlbumController.h; path = Private/Controller/ZQPhotoAlbumController.h; sourceTree = "<group>"; };
-		820D68166B30869EA32A718D8C86A542 /* ZQSystemPhoto.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ZQSystemPhoto.xcconfig; sourceTree = "<group>"; };
-		8F071327831757D8BB374AE07CF53BE8 /* ZQSystemPhoto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZQSystemPhoto-dummy.m"; sourceTree = "<group>"; };
-		93FA4D08CB8C90F38E9D3D8FD45ECBB7 /* back_black@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_black@3x.png"; path = "Private/Resources/back_black@3x.png"; sourceTree = "<group>"; };
-		9C3B4FB774C9757281350423F928F881 /* ZQSystemPhoto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZQSystemPhoto.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		847B159CD7EEBE68C0D97DECE007ACDB /* ZQCommonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQCommonView.m; sourceTree = "<group>"; };
+		852C843942FF4E50D4626600F84BEE29 /* ZQPhotoListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQPhotoListController.h; sourceTree = "<group>"; };
+		996EF8573E807991CC447100F4BF2341 /* ZQCommonCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQCommonCell.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A19C1E3AB204542A540CC43E46CFA533 /* ZQBaseController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQBaseController.h; path = Private/Controller/ZQBaseController.h; sourceTree = "<group>"; };
-		AA5CFFB559B0B0695700C0B078BE33AB /* ZQSystemPhotoAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQSystemPhotoAPI.m; path = Core/ZQSystemPhotoAPI.m; sourceTree = "<group>"; };
+		A7AE24313E45C29664042C26DD1C5747 /* ZQDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQDefine.h; sourceTree = "<group>"; };
 		AB8B169FAC8809A28E67E7AA4696122A /* Pods-ZQSystemPhotoDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ZQSystemPhotoDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		ABA0571AE3A280DB94847CB35CF17CC1 /* ZQPhotoDetailController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQPhotoDetailController.m; path = Private/Controller/ZQPhotoDetailController.m; sourceTree = "<group>"; };
-		B23B12647FF8716BB82FFFB9225003E8 /* ZQPhotoListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQPhotoListController.h; path = Private/Controller/ZQPhotoListController.h; sourceTree = "<group>"; };
-		BC1E30500A98340C208FCEB5E13F8FB7 /* ZQBaseController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQBaseController.m; path = Private/Controller/ZQBaseController.m; sourceTree = "<group>"; };
+		B0916BFB770067D73A009FF0E6277392 /* ZQPhotoAlbumController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQPhotoAlbumController.h; sourceTree = "<group>"; };
+		BFA26018F8C3B1E49A895D3582F0E0C2 /* ZQHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQHelper.m; sourceTree = "<group>"; };
 		BFB1373704B9BC30E9A5A549DFA59882 /* Pods-ZQSystemPhotoDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ZQSystemPhotoDemo-dummy.m"; sourceTree = "<group>"; };
-		C030395C0910B340CFB25650E06571D4 /* ZQDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQDataSource.m; path = Private/Other/ZQDataSource.m; sourceTree = "<group>"; };
-		C9170FC1B59E24466797C8FE61B1E909 /* ZQCommonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQCommonCell.h; path = Private/View/ZQCommonCell.h; sourceTree = "<group>"; };
-		CB820D9FA34BA4A1E0E09886E114D4A3 /* back_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_white@2x.png"; path = "Private/Resources/back_white@2x.png"; sourceTree = "<group>"; };
-		DFE312B80AC3448B63AA8F449B79D08F /* ZQHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQHelper.h; path = Private/Other/ZQHelper.h; sourceTree = "<group>"; };
-		E350BEC50F7ACF70C5C209668D0F2263 /* ZQCommonCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQCommonCell.m; path = Private/View/ZQCommonCell.m; sourceTree = "<group>"; };
-		E461919B9F3F2623BD42A40B17AA3755 /* ZQSystemPhoto_Header.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQSystemPhoto_Header.pch; path = Private/ZQSystemPhoto_Header.pch; sourceTree = "<group>"; };
-		E56C2EAA54EFC39CA9788909A5B262E7 /* ZQCommonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQCommonView.m; path = Private/View/ZQCommonView.m; sourceTree = "<group>"; };
-		EAC248AE5E8183D625019B080D0CB055 /* back_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_white@3x.png"; path = "Private/Resources/back_white@3x.png"; sourceTree = "<group>"; };
-		EB0FF4A4A4D7C96F82F6397E65D90D47 /* ZQSystemPhoto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZQSystemPhoto-prefix.pch"; sourceTree = "<group>"; };
+		C60F258ACF3E1A1BC7A96161C0A9263B /* ZQCommonCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQCommonCell.h; sourceTree = "<group>"; };
+		CA0AA50BE78344269F89DD88853BBB6C /* ZQCommonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQCommonView.h; sourceTree = "<group>"; };
+		CD9BDAA412DA0FE60968B17E9F8D940D /* ZQPhotoAlbumManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ZQPhotoAlbumManager.h; sourceTree = "<group>"; };
+		D91EC658C9CF683CD81443CF82A054D1 /* ZQSystemPhoto.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ZQSystemPhoto.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D9C7F0ECEDB963BE5D339E03B2F238D5 /* back_black@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_black@3x.png"; path = "Private/Resources/back_black@3x.png"; sourceTree = "<group>"; };
+		DECB23B2EAF0BD67110F98CC98DA3607 /* ZQCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQCommon.m; sourceTree = "<group>"; };
+		E359F56C4E0470F2FDC73EFB741BB632 /* ZQSystemPhotoAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQSystemPhotoAPI.m; sourceTree = "<group>"; };
+		E60D115C2C8684D023087F5F0BBE820B /* back_black@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_black@2x.png"; path = "Private/Resources/back_black@2x.png"; sourceTree = "<group>"; };
+		E9CC1428A1E6C45F787281B5ED3E46E5 /* ZQBaseController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQBaseController.m; sourceTree = "<group>"; };
+		EA1FA8140236F8AAFB566F3AB3A70ABB /* UIKitExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UIKitExtension.m; sourceTree = "<group>"; };
+		EE3D3D87F8FAFEF081A9F5224D8F259C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		EF210C2433CD2620F6538F1AF584710F /* ZQSystemPhoto-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ZQSystemPhoto-prefix.pch"; sourceTree = "<group>"; };
+		F28AA2ACD0941811B863F7A53E89A410 /* back_white@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_white@3x.png"; path = "Private/Resources/back_white@3x.png"; sourceTree = "<group>"; };
+		F327A54726C596CD0E1EE2E3DB3A1937 /* ZQSystemPhoto-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ZQSystemPhoto-dummy.m"; sourceTree = "<group>"; };
+		F39CC312357310517A0B729F9A69C901 /* ZQPhotoAlbumManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ZQPhotoAlbumManager.m; sourceTree = "<group>"; };
 		F5D4B49623217AD8933A87BD705105C7 /* Pods-ZQSystemPhotoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ZQSystemPhotoDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		F5F0A2269D6EFB0C567B14509A5895AA /* ZQDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ZQDataSource.h; path = Private/Other/ZQDataSource.h; sourceTree = "<group>"; };
-		F7231CB892C2438B1FAC4BF7F4A972B2 /* UIKitExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIKitExtension.h; path = Private/Other/UIKitExtension.h; sourceTree = "<group>"; };
-		F9DBA6007BDD0EBB34882A0655D4EEDE /* ZQPhotoAlbumManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ZQPhotoAlbumManager.m; path = Private/Manager/ZQPhotoAlbumManager.m; sourceTree = "<group>"; };
+		F8B53DF79481188DA60034BB66543342 /* back_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "back_white@2x.png"; path = "Private/Resources/back_white@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,22 +118,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		027CBB0D3805A3C6B56F07FA893CC0BD /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				F7231CB892C2438B1FAC4BF7F4A972B2 /* UIKitExtension.h */,
-				5A7DCF7893C92A3B37D6A3A1CFA55F6A /* UIKitExtension.m */,
-				5CB6C4F9A101DA24E7BF6824F52AB9C0 /* ZQCommon.h */,
-				3154365B906B8902DC8BFACF29B1E91B /* ZQCommon.m */,
-				F5F0A2269D6EFB0C567B14509A5895AA /* ZQDataSource.h */,
-				C030395C0910B340CFB25650E06571D4 /* ZQDataSource.m */,
-				19CE45E0D9BE2565E8CA0A4319F4A56B /* ZQDefine.h */,
-				DFE312B80AC3448B63AA8F449B79D08F /* ZQHelper.h */,
-				27E5FB745854CF8B2548D9FDAB99759D /* ZQHelper.m */,
-			);
-			name = Other;
-			sourceTree = "<group>";
-		};
 		05C8F86647BCDE1A3B4C48EB3FCDC3BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,59 +127,60 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1701BCAD54B05D8291BD639C47C9EE8C /* Support Files */ = {
+		06D051F95429922C30E701D12A698279 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				820D68166B30869EA32A718D8C86A542 /* ZQSystemPhoto.xcconfig */,
-				8F071327831757D8BB374AE07CF53BE8 /* ZQSystemPhoto-dummy.m */,
-				EB0FF4A4A4D7C96F82F6397E65D90D47 /* ZQSystemPhoto-prefix.pch */,
+				EE3D3D87F8FAFEF081A9F5224D8F259C /* LICENSE */,
+				7246C985E8863DEAE870AD9C145E274F /* README.md */,
+				D91EC658C9CF683CD81443CF82A054D1 /* ZQSystemPhoto.podspec */,
+				1C457C932172741C1643AAD0F5AD6E77 /* ZQSystemPhoto_Header.pch */,
 			);
-			name = "Support Files";
-			path = "ZQSystemPhotoDemo/Pods/Target Support Files/ZQSystemPhoto";
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		1BD6FE286C0D569511244D712D59B1EA /* Resources */ = {
+		335F2E4A1F6DE97DFDBBC41C14BAB1E6 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				4296868B9F9D4967C100AD63710F3FB7 /* back_black@2x.png */,
-				93FA4D08CB8C90F38E9D3D8FD45ECBB7 /* back_black@3x.png */,
-				CB820D9FA34BA4A1E0E09886E114D4A3 /* back_white@2x.png */,
-				EAC248AE5E8183D625019B080D0CB055 /* back_white@3x.png */,
-				459E9E234E023499121206382B9561FE /* select_white@2x.png */,
-				40115085FDA7A354077BBE3B2F9FB551 /* select_white@3x.png */,
+				455F3F524694C76BC6C25A84C7695455 /* UIKitExtension.h */,
+				EA1FA8140236F8AAFB566F3AB3A70ABB /* UIKitExtension.m */,
+				26F6D3A2F5887F1748390D1682B83FEE /* ZQCommon.h */,
+				DECB23B2EAF0BD67110F98CC98DA3607 /* ZQCommon.m */,
+				622E6A68FC65FD7CD0523B1C15BA9A8F /* ZQDataSource.h */,
+				36CE42AC5DB30B97B4FE3D80319995F4 /* ZQDataSource.m */,
+				A7AE24313E45C29664042C26DD1C5747 /* ZQDefine.h */,
+				314F168F342474BA0E30CAE777C52992 /* ZQHelper.h */,
+				BFA26018F8C3B1E49A895D3582F0E0C2 /* ZQHelper.m */,
 			);
-			name = Resources;
+			name = Other;
+			path = Other;
 			sourceTree = "<group>";
 		};
-		3BDEE331B7721280BFEF007DCC7C9954 /* Core */ = {
+		33ABF06F946753E69F71D71E5FEE941D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				54BF388121CC2B7F2DF4FE690EEC244B /* ZQSystemPhotoAPI.h */,
-				AA5CFFB559B0B0695700C0B078BE33AB /* ZQSystemPhotoAPI.m */,
+				3D85E27780B529F0506D3BEF88CC6647 /* ZQBaseController.h */,
+				E9CC1428A1E6C45F787281B5ED3E46E5 /* ZQBaseController.m */,
+				B0916BFB770067D73A009FF0E6277392 /* ZQPhotoAlbumController.h */,
+				5993611235F5843EE4EC90B1CEC98463 /* ZQPhotoAlbumController.m */,
+				386FFF9005BC6CB6044A103D044E9722 /* ZQPhotoDetailController.h */,
+				195945431BD872F773003C07828DE9DE /* ZQPhotoDetailController.m */,
+				852C843942FF4E50D4626600F84BEE29 /* ZQPhotoListController.h */,
+				6DD2FBA572F733F2ED75DFC62EC95217 /* ZQPhotoListController.m */,
 			);
-			name = Core;
+			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		43A6F0F720760EC0A6DFDAB0750F604E /* Manager */ = {
+		3E998E0197335E472FDE02D32B39CCCF /* Private */ = {
 			isa = PBXGroup;
 			children = (
-				6FCFD3412BA1DE60E2C39F1EE59619BC /* ZQPhotoAlbumManager.h */,
-				F9DBA6007BDD0EBB34882A0655D4EEDE /* ZQPhotoAlbumManager.m */,
-				7433DF87B6B5CA7EC46BDB70754E8762 /* ZQPhotoManager.h */,
-				08DEC83772562D55CEBA8E64A2C46CD9 /* ZQPhotoManager.m */,
-			);
-			name = Manager;
-			sourceTree = "<group>";
-		};
-		7140D19F1A09A579D3FCF8210D2DD1C3 /* Private */ = {
-			isa = PBXGroup;
-			children = (
-				8220BD7D29249FA8AB575302A4F3E6BF /* Controller */,
-				43A6F0F720760EC0A6DFDAB0750F604E /* Manager */,
-				027CBB0D3805A3C6B56F07FA893CC0BD /* Other */,
-				FCBF44066FBB42FB00D0E274B428F290 /* View */,
+				33ABF06F946753E69F71D71E5FEE941D /* Controller */,
+				9F70616B1C3119274354E2499C1EAB23 /* Manager */,
+				335F2E4A1F6DE97DFDBBC41C14BAB1E6 /* Other */,
+				7DAFA02EBA89553390B64C42468FE7C3 /* View */,
 			);
 			name = Private;
+			path = Private;
 			sourceTree = "<group>";
 		};
 		7BA3C71A2AE00E9EE4646A727776C428 /* Targets Support Files */ = {
@@ -206,38 +191,68 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8220BD7D29249FA8AB575302A4F3E6BF /* Controller */ = {
+		7DAFA02EBA89553390B64C42468FE7C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A19C1E3AB204542A540CC43E46CFA533 /* ZQBaseController.h */,
-				BC1E30500A98340C208FCEB5E13F8FB7 /* ZQBaseController.m */,
-				81A3342D91DE48F8EF9E236FAA9F45FF /* ZQPhotoAlbumController.h */,
-				78B4FA2DBC880E052FDDF4BDF2BA574D /* ZQPhotoAlbumController.m */,
-				58DEB85BC540BEE3394E2B78CAA94BC5 /* ZQPhotoDetailController.h */,
-				ABA0571AE3A280DB94847CB35CF17CC1 /* ZQPhotoDetailController.m */,
-				B23B12647FF8716BB82FFFB9225003E8 /* ZQPhotoListController.h */,
-				4022314B6E59572F5ABAA42D0D1BB9F5 /* ZQPhotoListController.m */,
+				C60F258ACF3E1A1BC7A96161C0A9263B /* ZQCommonCell.h */,
+				996EF8573E807991CC447100F4BF2341 /* ZQCommonCell.m */,
+				CA0AA50BE78344269F89DD88853BBB6C /* ZQCommonView.h */,
+				847B159CD7EEBE68C0D97DECE007ACDB /* ZQCommonView.m */,
 			);
-			name = Controller;
+			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
-		9B5D728B60199253F590FC6B7420CB45 /* ZQSystemPhoto */ = {
+		9F70616B1C3119274354E2499C1EAB23 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				3BDEE331B7721280BFEF007DCC7C9954 /* Core */,
-				F6360953DC5143BC921B05C616BE51DE /* Pod */,
-				7140D19F1A09A579D3FCF8210D2DD1C3 /* Private */,
-				1BD6FE286C0D569511244D712D59B1EA /* Resources */,
-				1701BCAD54B05D8291BD639C47C9EE8C /* Support Files */,
+				CD9BDAA412DA0FE60968B17E9F8D940D /* ZQPhotoAlbumManager.h */,
+				F39CC312357310517A0B729F9A69C901 /* ZQPhotoAlbumManager.m */,
+				58B1D30962F06178C1C631B7B0A3F533 /* ZQPhotoManager.h */,
+				6EA48EA2F48AA89B78C41FFF43CC7343 /* ZQPhotoManager.m */,
+			);
+			name = Manager;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		AE3250128911FE3078436904BC0A2DE7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5105C2AC7BB56D427C013AB56E615B0B /* ZQSystemPhotoAPI.h */,
+				E359F56C4E0470F2FDC73EFB741BB632 /* ZQSystemPhotoAPI.m */,
+			);
+			name = Core;
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BD467C6A0BA03EC13748829DDB304C79 /* ZQSystemPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				AE3250128911FE3078436904BC0A2DE7 /* Core */,
+				06D051F95429922C30E701D12A698279 /* Pod */,
+				3E998E0197335E472FDE02D32B39CCCF /* Private */,
+				EE97C590A4E3A384CF8BE4DCC8BA6A5C /* Resources */,
+				BECE40EC5784F83C151F4A5265CB77DB /* Support Files */,
 			);
 			name = ZQSystemPhoto;
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		BECE40EC5784F83C151F4A5265CB77DB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				431C96456676E1B0292099455ACF3430 /* ZQSystemPhoto.xcconfig */,
+				F327A54726C596CD0E1EE2E3DB3A1937 /* ZQSystemPhoto-dummy.m */,
+				EF210C2433CD2620F6538F1AF584710F /* ZQSystemPhoto-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "ZQSystemPhotoDemo/Pods/Target Support Files/ZQSystemPhoto";
+			sourceTree = "<group>";
+		};
 		C2015EC5611AD8F875FD202EB5188CB0 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9B5D728B60199253F590FC6B7420CB45 /* ZQSystemPhoto */,
+				BD467C6A0BA03EC13748829DDB304C79 /* ZQSystemPhoto */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -274,49 +289,40 @@
 			path = "Target Support Files/Pods-ZQSystemPhotoDemo";
 			sourceTree = "<group>";
 		};
-		F6360953DC5143BC921B05C616BE51DE /* Pod */ = {
+		EE97C590A4E3A384CF8BE4DCC8BA6A5C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				27BCDEC4EA67CB6F35BEC8F19A5E0424 /* LICENSE */,
-				0079DB076A8FD18B2A6E8EC672920A6A /* README.md */,
-				9C3B4FB774C9757281350423F928F881 /* ZQSystemPhoto.podspec */,
-				E461919B9F3F2623BD42A40B17AA3755 /* ZQSystemPhoto_Header.pch */,
+				E60D115C2C8684D023087F5F0BBE820B /* back_black@2x.png */,
+				D9C7F0ECEDB963BE5D339E03B2F238D5 /* back_black@3x.png */,
+				F8B53DF79481188DA60034BB66543342 /* back_white@2x.png */,
+				F28AA2ACD0941811B863F7A53E89A410 /* back_white@3x.png */,
+				6C0353EA02CCD5F7700AAF91B0658127 /* select_white@2x.png */,
+				21186D108F42A06560DA348D1463F648 /* select_white@3x.png */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		FCBF44066FBB42FB00D0E274B428F290 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C9170FC1B59E24466797C8FE61B1E909 /* ZQCommonCell.h */,
-				E350BEC50F7ACF70C5C209668D0F2263 /* ZQCommonCell.m */,
-				045F4EA376E1D90815E8C9D2C8597870 /* ZQCommonView.h */,
-				E56C2EAA54EFC39CA9788909A5B262E7 /* ZQCommonView.m */,
-			);
-			name = View;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		BE2E6D9B81EB7039E4CDDD49D5BCBBFB /* Headers */ = {
+		3B2CD9D400DD849B21463A5CD7560192 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F8B1E3EA679D271C22287915283D3E4 /* UIKitExtension.h in Headers */,
-				3DF4918BE63EE83E068EDBED599A5EDC /* ZQBaseController.h in Headers */,
-				C282ECA7E27BE1FB362258A2C2C670C8 /* ZQCommon.h in Headers */,
-				8E9D170D98AD02576F260539329F9647 /* ZQCommonCell.h in Headers */,
-				51E4A1EFD4AAEB8FA4971637D7FED8E7 /* ZQCommonView.h in Headers */,
-				9202C35FC1F90DF767891821BAE6D502 /* ZQDataSource.h in Headers */,
-				4F67C269EB383927AC5912F87448B8D3 /* ZQDefine.h in Headers */,
-				A078752A7C7F168907EE9227190ABE9C /* ZQHelper.h in Headers */,
-				77059790130B7DAF9CD3E0C8E947BE18 /* ZQPhotoAlbumController.h in Headers */,
-				AE599902EC5F763F748265CC52AC4955 /* ZQPhotoAlbumManager.h in Headers */,
-				B3EEB4062EBE3F41C09D5102805452EA /* ZQPhotoDetailController.h in Headers */,
-				73BB45B8C07ED9EC0C522B0DE6138410 /* ZQPhotoListController.h in Headers */,
-				10E8870342ADEBC537BBC54813D74656 /* ZQPhotoManager.h in Headers */,
-				05E4487F5C22C977E12C852A840F77B0 /* ZQSystemPhotoAPI.h in Headers */,
+				DF7D3FEAA641666534214FDD29A79954 /* UIKitExtension.h in Headers */,
+				DB190B3435A964CFCAC7BC72715AFF6D /* ZQBaseController.h in Headers */,
+				DACB2146177763911C7A05FE571D3791 /* ZQCommon.h in Headers */,
+				5ACE72C70D0768EC327BC527B1294874 /* ZQCommonCell.h in Headers */,
+				C3877ECF25C253BA75AB5C95D593B75D /* ZQCommonView.h in Headers */,
+				66721F30152BAC0136C96380D7C0862B /* ZQDataSource.h in Headers */,
+				4DC03A323CEDA34D48979E59613F1B53 /* ZQDefine.h in Headers */,
+				2E7B33A0748A5FE91DCDA710C9E6BCDF /* ZQHelper.h in Headers */,
+				39A6ADDF514022D0E4668A8E8AB5DF76 /* ZQPhotoAlbumController.h in Headers */,
+				6E80F0FEA875926FF1ABAFFB43D8953C /* ZQPhotoAlbumManager.h in Headers */,
+				72FA2B8827D05EDCB07E4186D9ED8BD9 /* ZQPhotoDetailController.h in Headers */,
+				1B3E0C1C759B0FF37B01D81829129D24 /* ZQPhotoListController.h in Headers */,
+				717A45E92EF09D5364815CAE5BD259AC /* ZQPhotoManager.h in Headers */,
+				CD1C0690C3C9D860630412EAE95593CA /* ZQSystemPhotoAPI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +340,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2A3C04EDC31D41EA51B80D0F2C0292C /* Build configuration list for PBXNativeTarget "ZQSystemPhoto" */;
 			buildPhases = (
-				BE2E6D9B81EB7039E4CDDD49D5BCBBFB /* Headers */,
-				144FF2AC7A4AFCF1CDD05B1AAF8B53CD /* Sources */,
+				3B2CD9D400DD849B21463A5CD7560192 /* Headers */,
+				1BE496C2D575BD089A9C4836D831AAAB /* Sources */,
 				6837660BB4B5595B260AF83CD236B790 /* Frameworks */,
 			);
 			buildRules = (
@@ -375,7 +381,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -393,24 +399,24 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		144FF2AC7A4AFCF1CDD05B1AAF8B53CD /* Sources */ = {
+		1BE496C2D575BD089A9C4836D831AAAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2806A020A81499A7FF19DD9272961D23 /* UIKitExtension.m in Sources */,
-				AF29250207997410F0F51ED587B80C2A /* ZQBaseController.m in Sources */,
-				5E9CA6D6352C83CE267955EA8CD45924 /* ZQCommon.m in Sources */,
-				BE1C5A300380BDF61ADDD2B49C7A1DB8 /* ZQCommonCell.m in Sources */,
-				9C1823A4881D0089A8C16A22D1C6B607 /* ZQCommonView.m in Sources */,
-				214024BEEC97BD206F83AC92F2DD4A71 /* ZQDataSource.m in Sources */,
-				A128E646D6C1C1F2F0B39FCF3247F2E1 /* ZQHelper.m in Sources */,
-				23105EE200D53A86D7B60CCC6E3B4E51 /* ZQPhotoAlbumController.m in Sources */,
-				0E5133DB6E29C1EAB17A9B7067F3DF2C /* ZQPhotoAlbumManager.m in Sources */,
-				61B1F614F63BA10E6698E063AF1886EB /* ZQPhotoDetailController.m in Sources */,
-				D991775F25E7F5D928DDE433713AD663 /* ZQPhotoListController.m in Sources */,
-				B5C824BD7538548469F3E258E745FF13 /* ZQPhotoManager.m in Sources */,
-				6674EE73E0FAF65DFCA97B3E75E15709 /* ZQSystemPhoto-dummy.m in Sources */,
-				6085E5069C54DA4A0B9495B72B401A42 /* ZQSystemPhotoAPI.m in Sources */,
+				05A777AE4E45D60495CA9573C8FA1BF7 /* UIKitExtension.m in Sources */,
+				5FDDB375523B9B10B33B4B78366AB64A /* ZQBaseController.m in Sources */,
+				0BBE4B03E3FC735C97AE5B67BB53F3E1 /* ZQCommon.m in Sources */,
+				18648B01D984B8C331C01C0CCF00ACA2 /* ZQCommonCell.m in Sources */,
+				1BD46EFFBEC03A694F1402B30F6257A4 /* ZQCommonView.m in Sources */,
+				02C08EF64A6B20AA01685C25B76A7332 /* ZQDataSource.m in Sources */,
+				FBF91A96E9829D2852F3350414FA27FF /* ZQHelper.m in Sources */,
+				5594BD1D40B280E8E6FFEBC03659BDF2 /* ZQPhotoAlbumController.m in Sources */,
+				3847ACE4759EA5D95AAE4D39DE6D1309 /* ZQPhotoAlbumManager.m in Sources */,
+				8F2FFBACA56040C5B031A00B4B99EC6D /* ZQPhotoDetailController.m in Sources */,
+				773796DB4B752CE413C7D729C9A5A5EC /* ZQPhotoListController.m in Sources */,
+				9ADE98B69F7E28FC2A7B340538E4BDA9 /* ZQPhotoManager.m in Sources */,
+				30577FF167E4E168FA9CEAF0CB33D869 /* ZQSystemPhoto-dummy.m in Sources */,
+				158701A957EB02F2F8E623660A26A535 /* ZQSystemPhotoAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +464,7 @@
 		};
 		53030D4AB54D4B0BC49CDEEA9C5A8093 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 820D68166B30869EA32A718D8C86A542 /* ZQSystemPhoto.xcconfig */;
+			baseConfigurationReference = 431C96456676E1B0292099455ACF3430 /* ZQSystemPhoto.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -482,7 +488,7 @@
 		};
 		6D9549C98E3CB279CDCC9BE75028FDA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 820D68166B30869EA32A718D8C86A542 /* ZQSystemPhoto.xcconfig */;
+			baseConfigurationReference = 431C96456676E1B0292099455ACF3430 /* ZQSystemPhoto.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

@@ -1,6 +1,6 @@
 {
   "name": "ZQSystemPhoto",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "summary": "访问系统相册的组件",
   "description": "通过该组件，可以访问系统相册，该组件仿照微信开发，支持照片的多选，单选。",
   "homepage": "https://github.com/caozhiqiang1002",
@@ -13,44 +13,21 @@
   },
   "source": {
     "git": "https://github.com/caozhiqiang1002/ZQSystemPhoto.git",
-    "tag": "1.0.1"
+    "tag": "1.0.3"
   },
+  "public_header_files": "Core/*.{h}",
+  "private_header_files": "Private/**/*.{h}",
+  "source_files": [
+    "Core/*.{h,m}",
+    "Private/Controller/*.{h,m}",
+    "Private/Manager/*.{h,m}",
+    "Private/Other/*.{h,m}",
+    "Private/View/*.{h,m}"
+  ],
   "prefix_header_file": "Private/ZQSystemPhoto_Header.pch",
   "resources": "Private/Resources/*.{png}",
   "requires_arc": true,
   "platforms": {
     "ios": "9.0"
-  },
-  "subspecs": [
-    {
-      "name": "Core",
-      "public_header_files": "Core/*.{h}",
-      "source_files": "Core/*.{h,m}"
-    },
-    {
-      "name": "Private",
-      "subspecs": [
-        {
-          "name": "Controller",
-          "private_header_files": "Private/Controller/*.{h}",
-          "source_files": "Private/Controller/*.{h,m}"
-        },
-        {
-          "name": "Manager",
-          "private_header_files": "Private/Manager/*.{h}",
-          "source_files": "Private/Manager/*.{h,m}"
-        },
-        {
-          "name": "Other",
-          "private_header_files": "Private/Other/*.{h}",
-          "source_files": "Private/Other/*.{h,m}"
-        },
-        {
-          "name": "View",
-          "private_header_files": "Private/View/*.{h}",
-          "source_files": "Private/View/*.{h,m}"
-        }
-      ]
-    }
-  ]
+  }
 }
