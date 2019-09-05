@@ -200,7 +200,8 @@
 
 #pragma mark - 照片详情中的原图
 
-@interface ZQPhotoDetailCell ()
+@interface ZQPhotoDetailCell ()<UIScrollViewDelegate>
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIImageView *imageView;
 @end
 
@@ -208,20 +209,35 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
+        [self createScrollView];
         [self createImageView];
     }
     return self;
+}
+
+- (void)createScrollView {
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
+    self.scrollView.backgroundColor = [UIColor clearColor];
+    self.scrollView.minimumZoomScale = 1.0f;
+    self.scrollView.maximumZoomScale = 5.0f;
+    self.scrollView.delegate = self;
+    [self addSubview:self.scrollView];
 }
 
 - (void)createImageView {
     self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
     self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     self.imageView.backgroundColor = [UIColor clearColor];
-    [self addSubview:self.imageView];
+    [self.scrollView addSubview:self.imageView];
 }
 
 - (void)handleData:(UIImage *)image {
     self.imageView.image = image;
+    self.scrollView.zoomScale = 1.0f;
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.imageView;
 }
 
 @end

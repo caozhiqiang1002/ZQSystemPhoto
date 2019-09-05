@@ -1,5 +1,5 @@
 PODS:
-  - ZQSystemPhoto (1.0.3)
+  - ZQSystemPhoto (1.0.4)
 
 DEPENDENCIES:
   - ZQSystemPhoto (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZQSystemPhoto: 83145e51d5ac8d3b8e664f5daf283b40e0c45133
+  ZQSystemPhoto: 8064ff41a21fd77f8e9822137b99b52288727dda
 
 PODFILE CHECKSUM: fd9f9a98689046bf91259451d466d04052c82a30
 

@@ -214,7 +214,7 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
     
     NSUInteger currentIndex = scrollView.contentOffset.x/scrollView.width;
@@ -234,6 +234,9 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
         if (!isFind) {
             [self.smallPhotoView updateItemStatus:nil];
         }
+        
+        [self.collectionView reloadItemsAtIndexPaths:@[config.indexPath]];
+        
         config.indexPath = indexPath;
     }
 }
