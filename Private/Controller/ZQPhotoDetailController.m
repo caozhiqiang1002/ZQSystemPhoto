@@ -141,24 +141,27 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
     [self.dataSource updateData:config.wholeAssets];
     [self.collectionView reloadData];
     
+    [self.collectionView scrollToItemAtIndexPath:config.indexPath
+                                atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
+                                        animated:YES];
+
+    [self updateCountLabelStatus:config.indexPath];
+    
     if (config.selectedAssets.count > 0) {
         [self.smallPhotoView reloadData:config.selectedAssets];
         self.smallPhotoView.hidden = NO;
         
-        [self.collectionView scrollToItemAtIndexPath:config.indexPath
-                                    atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
-                                            animated:YES];
-        
-        
         [self.tabbarView hideShadowView:YES
                           selectedCount:config.selectedIndexPaths.count];
         
-        [self updateCountLabelStatus:config.indexPath];
+        /* 当点击非选中照片时，下方缩略图没有选中状态 */
+        [self.smallPhotoView updateItemStatus:nil];
     }
 }
 
 #pragma mark - Private
 
+//刷新导航条上方选中照片的个数
 - (void)updateCountLabelStatus:(NSIndexPath *)indexPath {
     ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
     BOOL isFind = NO;
