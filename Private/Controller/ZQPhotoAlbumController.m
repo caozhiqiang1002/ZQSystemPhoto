@@ -128,8 +128,14 @@ static NSString  * const Photo_Album_CellID = @"Photo_Album_CellID";
         model = nil;
     }
     
-    ZQPhotoListController *photoListVC = [ZQPhotoListController showPhotoListVC:model];
-    [self.navigationController pushViewController:photoListVC animated:YES];
+    ZQPhotoItemConfig *config = [ZQPhotoManager sharedInstance].config;
+    if (config.style == ZQPhotoSelectStyleMore) {
+        ZQPhotoListMoreController *photoListVC = [ZQPhotoListMoreController showPhotoListVC:model];
+        [self.navigationController pushViewController:photoListVC animated:YES];
+    }else{
+        ZQPhotoListSingleController *photoListVC = [ZQPhotoListSingleController showPhotoListVC:model];
+        [self.navigationController pushViewController:photoListVC animated:YES];
+    }
 }
 
 #pragma mark - ZQNavigationViewDelegate

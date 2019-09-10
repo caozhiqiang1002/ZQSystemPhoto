@@ -6,10 +6,13 @@
 //  Copyright © 2019 caozhiqiang. All rights reserved.
 //
 
-#import "ZQBaseController.h"
+#import "ZQPhotoDetailBaseController.h"
 #import "ZQPhotoAlbumManager.h"
 
-@interface ZQPhotoDetailController : ZQBaseController
+@interface ZQPhotoDetailMoreController : ZQPhotoDetailBaseController
 
 @end
 
+@interface ZQPhotoDetailSingleController : ZQPhotoDetailBaseController
+
+@end

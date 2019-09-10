@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, ZQPhotoSelectStyle) {
+    ZQPhotoSelectStyleSingle,       //选择单张图片
+    ZQPhotoSelectStyleMore,         //选择多张图片
+};
+
 /**
  * @brief collectionView 中 cell 的相关配置
  */
@@ -20,11 +25,13 @@
 @property (nonatomic, assign) CGFloat sectionSpace;
 /**< 选择照片的最大张数 >*/
 @property (nonatomic, assign) NSUInteger selectedMaxCount;
+/**< 选择照片的方式（单选，多选）>*/
+@property (nonatomic, assign) ZQPhotoSelectStyle style;
 
 + (ZQPhotoItemConfig *)createObjectWithCount:(NSUInteger)itemCount
                                    itemSpace:(CGFloat)itemSpace
                                 sectionSpace:(CGFloat)sectionSpace
-                            selectedMaxCount:(NSUInteger)selectedMaxCount;
+                            selectedMaxCount:(NSUInteger)selectedMaxCount style:(ZQPhotoSelectStyle)style;
 
 @end
 

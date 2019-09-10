@@ -11,8 +11,34 @@
 
 #pragma mark - 照片列表
 
-@interface ZQPhotoCell ()
+@interface ZQPhotoBaseCell ()
 @property (nonatomic, strong) UIImageView *imageView;
+@end
+
+@implementation ZQPhotoBaseCell
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self createImageView];
+    }
+    return self;
+}
+
+- (void)createImageView {
+    self.imageView = [[UIImageView alloc] initWithFrame:self.bounds];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    self.imageView.clipsToBounds = YES;
+    self.imageView.backgroundColor = [UIColor clearColor];
+    [self addSubview:self.imageView];
+}
+
+- (void)handleData:(UIImage *)image {
+    self.imageView.image = image;
+}
+
+@end
+
+@interface ZQPhotoCell ()
 @property (nonatomic, strong) UIImageView *selectImageView;
 @property (nonatomic, strong) UILabel *countLabel;
 @end
@@ -21,19 +47,10 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        [self createImageView];
         [self createSelectImageView];
         [self createCountLabel];
     }
     return self;
-}
-
-- (void)createImageView {
-    self.imageView = [[UIImageView alloc] init];
-    self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    self.imageView.clipsToBounds = YES;
-    self.imageView.backgroundColor = [UIColor clearColor];
-    [self addSubview:self.imageView];
 }
 
 - (void)createSelectImageView {
@@ -68,7 +85,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.imageView.frame = self.bounds;
     self.selectImageView.frame = CGRectMake(self.width-25, 0, 25, 25);
     
     self.countLabel.frame = self.selectImageView.frame;
@@ -102,10 +118,6 @@
     
     self.countLabel.hidden = YES;
     self.selectImageView.hidden = NO;
-}
-
-- (void)handleData:(UIImage *)image {
-    self.imageView.image = image;
 }
 
 - (void)updateSeleectedImageCount:(NSUInteger)count isSelected:(BOOL)isSelected {

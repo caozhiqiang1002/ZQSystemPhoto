@@ -107,6 +107,8 @@ typedef NS_OPTIONS(NSUInteger, ZQNavigationViewType) {
  */
 - (void)hideShadowView:(BOOL)isHide selectedCount:(NSUInteger)selectedCount;
 
+- (void)changeTabbarState;
+
 @end
 
 
@@ -151,3 +153,4 @@ typedef NS_OPTIONS(NSUInteger, ZQNavigationViewType) {
 - (void)updateItemStatus:(NSIndexPath *)indexPath;
 
 @end
+

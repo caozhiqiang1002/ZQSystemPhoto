@@ -81,6 +81,7 @@
     PHImageRequestOptions *options = [[PHImageRequestOptions alloc] init];
     options.deliveryMode = PHImageRequestOptionsDeliveryModeHighQualityFormat;
     options.resizeMode = PHImageRequestOptionsResizeModeExact;
+    options.synchronous = self.isSyncOperation;
     return options;
 }
 

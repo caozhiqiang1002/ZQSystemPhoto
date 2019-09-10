@@ -18,12 +18,16 @@
 
 @end
 
-
-@interface ZQPhotoCell : UICollectionViewCell
-
-@property (nonatomic, weak) id<ZQPhotoCellDelegate> delegate;
+@interface ZQPhotoBaseCell : UICollectionViewCell
 
 - (void)handleData:(UIImage *)image;
+
+@end
+
+
+@interface ZQPhotoCell : ZQPhotoBaseCell
+
+@property (nonatomic, weak) id<ZQPhotoCellDelegate> delegate;
 
 - (void)updateSeleectedImageCount:(NSUInteger)count isSelected:(BOOL)isSelected;
 

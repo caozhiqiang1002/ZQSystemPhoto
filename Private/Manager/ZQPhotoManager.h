@@ -16,6 +16,8 @@ typedef void(^ZQPhotoHandler)(UIImage *image, NSDictionary *imageInfo);
 
 /**< 照片列表中cell的配置 >*/
 @property (nonatomic, strong) ZQPhotoItemConfig *config;
+/*< 是否同步获取图片 >*/
+@property (nonatomic, assign) BOOL isSyncOperation;
 
 /**
  * @brief 单例对象

@@ -269,6 +269,23 @@
     }
 }
 
+- (void)changeTabbarState {
+    self.frame = CGRectMake(0, kScreenHeight-55, kScreenWidth, 55);
+    
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 0.5)];
+    lineView.backgroundColor = ZQUIColorAFromHex(0xffffff, 0.4);
+    [self addSubview:lineView];
+    
+    self.rightLabel.frame = CGRectMake(self.width-13-40, lineView.maxY, 40, self.height-lineView.maxY);
+    self.rightLabel.font = ZQFont(16.0f);
+    self.rightLabel.clipsToBounds = NO;
+    self.rightLabel.textColor = [UIColor whiteColor];
+    self.rightLabel.backgroundColor = [UIColor clearColor];
+    
+    self.shadowView.hidden = YES;
+    self.leftLabel.height = self.rightLabel.height;
+}
+
 @end
 
 

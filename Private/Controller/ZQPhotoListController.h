@@ -6,11 +6,19 @@
 //  Copyright © 2019 caozhiqiang. All rights reserved.
 //
 
-#import "ZQBaseController.h"
-#import "ZQPhotoAlbumManager.h"
+#import "ZQPhotoListBaseController.h"
 
-@interface ZQPhotoListController : ZQBaseController
+/// 多张图片
+@interface ZQPhotoListMoreController : ZQPhotoListBaseController
 
-+ (ZQPhotoListController *)showPhotoListVC:(ZQFetchAlbumInfoModel *)model;
++ (ZQPhotoListMoreController *)showPhotoListVC:(ZQFetchAlbumInfoModel *)model;
+
+@end
+
+
+/// 单张图片
+@interface ZQPhotoListSingleController : ZQPhotoListBaseController
+
++ (ZQPhotoListSingleController *)showPhotoListVC:(ZQFetchAlbumInfoModel *)mode;
 
 @end

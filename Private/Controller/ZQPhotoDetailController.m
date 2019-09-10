@@ -10,11 +10,8 @@
 #import "ZQDataSource.h"
 #import "ZQPhotoManager.h"
 
-static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
+@interface ZQPhotoDetailMoreController ()<ZQNavigationViewDelegate, ZQTabbarViewDelegate, UIScrollViewDelegate, ZQSmallPhotoViewDelegate>
 
-@interface ZQPhotoDetailController ()<UICollectionViewDelegateFlowLayout, ZQNavigationViewDelegate, ZQTabbarViewDelegate,UIScrollViewDelegate, ZQSmallPhotoViewDelegate>
-
-@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) ZQNavigationView *navigationView;
 @property (nonatomic, strong) ZQTabbarView *tabbarView;
 @property (nonatomic, strong) UILabel *countLabel;
@@ -26,19 +23,23 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
 
 @end
 
-@implementation ZQPhotoDetailController
+@implementation ZQPhotoDetailMoreController
 
 - (void)dealloc {
-    NSLog(@"ZQPhotoDetailController dealloc");
-    [[ZQPhotoManager sharedInstance] stopCaches:[ZQPhotoAlbumManager sharedInstance].config.wholeAssets
-                                      assetSize:ZQPhotoBigSize];
+    NSLog(@"ZQPhotoDetailMoreController dealloc");
+}
+
+- (NSString *)cellIdentifer {
+    return @"Photo_Detail_CellID";
+}
+
+- (NSString *)cellClassName {
+    return NSStringFromClass([ZQPhotoDetailCell class]);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self createDataSource];
-    [self createCollectionView];
     [self createNavigationView];
     [self createCountLabel];
     [self createTabbarView];
@@ -47,30 +48,7 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
     [self getPhotoListData];
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
 #pragma mark - Create UI
-
-- (void)createCollectionView {
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight-20);
-    layout.minimumInteritemSpacing = 0.0f;
-    layout.minimumLineSpacing = 0.0f;
-    layout.sectionInset = UIEdgeInsetsZero;
-    
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
-                                             collectionViewLayout:layout];
-    self.collectionView.pagingEnabled = YES;
-    self.collectionView.backgroundColor = ZQUIColorFromHex(0x000000);
-    self.collectionView.dataSource = self.dataSource;
-    self.collectionView.delegate = self;
-    [self.view addSubview:self.collectionView];
-    
-    [self.collectionView registerClass:[ZQPhotoDetailCell class] forCellWithReuseIdentifier:Photo_Detail_CellID];
-}
 
 - (void)createNavigationView {
     self.navigationView = [ZQNavigationView navigationViewWithType:ZQNavigationViewTypeLeftImage|ZQNavigationViewTypeRightImage
@@ -118,33 +96,19 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
 
 #pragma mark - InitializeData
 
-- (void)createDataSource {
-    ZQDataSourceCompletion completion = ^(id item, NSIndexPath *indexPath, id cell){
-        [[ZQPhotoManager sharedInstance] getSmallImageInfo:item
-                                                      size:ZQPhotoBigSize
-                                                   handler:^(UIImage *image, NSDictionary *imageInfo) {
-                                                       [((ZQPhotoDetailCell *)cell) handleData:image];
-                                                   }];
-    };
-    
-    self.dataSource = [ZQDataSource dataSourceWithCellID:Photo_Detail_CellID
-                                               cellClass:[ZQPhotoDetailCell class]
-                                                delegate:nil
-                                              completion:completion];
+- (void)configCellInfo {
+    [self.collectionView registerClass:[ZQPhotoDetailCell class] forCellWithReuseIdentifier:self.cellIdentifer];
+}
+
+- (void)getImage:(UIImage *)image indexPath:(NSIndexPath *)indexPath cell:(id)cell {
+    [((ZQPhotoDetailCell *)cell) handleData:image];
 }
 
 - (void)getPhotoListData {
+    [super getPhotoListData];
+    
     ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
     
-    [[ZQPhotoManager sharedInstance] startCaches:config.wholeAssets assetSize:ZQPhotoBigSize];
-    
-    [self.dataSource updateData:config.wholeAssets];
-    [self.collectionView reloadData];
-    
-    [self.collectionView scrollToItemAtIndexPath:config.indexPath
-                                atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
-                                        animated:YES];
-
     [self updateCountLabelStatus:config.indexPath];
     
     if (config.selectedAssets.count > 0) {
@@ -315,6 +279,89 @@ static NSString * const Photo_Detail_CellID = @"Photo_Detail_CellID";
     [self.collectionView scrollToItemAtIndexPath:selectedIndexPath
                                 atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally
                                         animated:NO];
+}
+
+@end
+
+
+
+
+@interface ZQPhotoDetailSingleController ()<ZQTabbarViewDelegate, UIScrollViewDelegate>
+@property (nonatomic, strong) ZQTabbarView *tabbarView;
+@end
+
+@implementation ZQPhotoDetailSingleController
+
+- (void)dealloc {
+    NSLog(@"ZQPhotoDetailSingleController dealloc");
+}
+
+- (NSString *)cellIdentifer {
+    return @"Photo_Detail_CellID";
+}
+
+- (NSString *)cellClassName {
+    return NSStringFromClass([ZQPhotoDetailCell class]);
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self createTabbarView];
+    [self getPhotoListData];
+}
+
+#pragma mark - Create UI
+
+- (void)createTabbarView {
+    self.tabbarView = [ZQTabbarView tabbarViewWithTitle:@"取消" delegate:self];
+    self.tabbarView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.tabbarView];
+    
+    [self.tabbarView changeTabbarState];
+}
+
+#pragma mark - Super
+
+- (void)configCellInfo {
+    [self.collectionView registerClass:[ZQPhotoDetailCell class] forCellWithReuseIdentifier:self.cellIdentifer];
+}
+
+- (void)getImage:(UIImage *)image indexPath:(NSIndexPath *)indexPath cell:(id)cell {
+    [((ZQPhotoDetailCell *)cell) handleData:image];
+}
+
+#pragma mark - ZQTabbarViewDelegate
+
+- (void)tabbarLeftOperation {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)tabbarRightOperation {
+    //将图片请求设置为同步，保证获取到数据
+    [ZQPhotoManager sharedInstance].isSyncOperation = YES;
+    
+    ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
+    [config addIndexPath:config.indexPath];
+    [ZQPhotoAlbumManager sharedInstance].handleResult(config.selectedImgInfo);
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    
+    //将图片请求重置为异步，保证异步加载
+    [ZQPhotoManager sharedInstance].isSyncOperation = NO;
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    ZQPhotoListConfig *config = [ZQPhotoAlbumManager sharedInstance].config;
+    
+    NSUInteger currentIndex = scrollView.contentOffset.x/scrollView.width;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:currentIndex inSection:0];
+    
+    if (config.indexPath != indexPath) {
+        [self.collectionView reloadItemsAtIndexPaths:@[config.indexPath]];
+        config.indexPath = indexPath;
+    }
 }
 
 @end

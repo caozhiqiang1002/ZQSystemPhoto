@@ -52,13 +52,14 @@
 + (ZQPhotoItemConfig *)createObjectWithCount:(NSUInteger)itemCount
                                    itemSpace:(CGFloat)itemSpace
                                 sectionSpace:(CGFloat)sectionSpace
-                            selectedMaxCount:(NSUInteger)selectedMaxCount {
+                            selectedMaxCount:(NSUInteger)selectedMaxCount style:(ZQPhotoSelectStyle)style {
     
     ZQPhotoItemConfig *config = [[ZQPhotoItemConfig alloc] init];
     config.itemCount = itemCount;
     config.itemSpace = itemSpace;
     config.sectionSpace = sectionSpace;
     config.selectedMaxCount = selectedMaxCount;
+    config.style = style;
     
     return config;
 }
@@ -84,6 +85,7 @@
     config.itemSpace = 3.0f;
     config.sectionSpace = 3.0f;
     config.selectedMaxCount = 0;
+    config.style = ZQPhotoSelectStyleMore;
     
     [self showSystemPhoto:currentVC config:config handler:handler];
 }
@@ -99,8 +101,12 @@
     [ZQPhotoManager sharedInstance].config = config;
     [ZQPhotoAlbumManager sharedInstance].handleResult = handler;
     
-    ZQPhotoListController *listVC = [ZQPhotoListController showPhotoListVC:nil];
-    
+    UIViewController *listVC = nil;
+    if (config.style == ZQPhotoSelectStyleMore) {
+        listVC = [ZQPhotoListMoreController showPhotoListVC:nil];
+    }else{
+        listVC = [ZQPhotoListSingleController showPhotoListVC:nil];
+    }
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:listVC];
     [currentVC presentViewController:nav animated:YES completion:nil];
 }
@@ -111,6 +117,7 @@
     config.itemSpace = 3.0f;
     config.sectionSpace = 3.0f;
     config.selectedMaxCount = 0;
+    config.style = ZQPhotoSelectStyleMore;
     
     [self showSystemPhotoAlbum:currentVC config:config handler:handler];
 }
@@ -126,7 +133,6 @@
     [ZQPhotoAlbumManager sharedInstance].handleResult = handler;
     
     ZQPhotoAlbumController *albumVC = [[ZQPhotoAlbumController alloc] init];
-    
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:albumVC];
     [currentVC presentViewController:nav animated:YES completion:nil];
 }
