@@ -24,6 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (@available(iOS 11.0, *)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     [self createDataSource];
     [self createCollectionView];
     [self configCellInfo];
@@ -55,7 +62,7 @@
 - (void)createCollectionView {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight-20);
+    layout.itemSize = CGSizeMake(kScreenWidth, kScreenHeight);
     layout.minimumInteritemSpacing = 0.0f;
     layout.minimumLineSpacing = 0.0f;
     layout.sectionInset = UIEdgeInsetsZero;

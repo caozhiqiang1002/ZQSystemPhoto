@@ -40,7 +40,7 @@
 
 - (void)createTabbarView {
     self.tabbarView = [ZQTabbarView tabbarViewWithTitle:@"预览" delegate:self];
-    self.tabbarView.backgroundColor = ZQUIColorFromHex(0x272d32);
+    self.tabbarView.backgroundColor = ZQUIColorAFromHex(0x202020, 0.95);
     [self.view addSubview:self.tabbarView];
 }
 

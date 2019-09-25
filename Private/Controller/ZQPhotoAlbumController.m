@@ -58,7 +58,7 @@ static NSString  * const Photo_Album_CellID = @"Photo_Album_CellID";
     self.tableView.delegate = self;
     [self.view addSubview:self.tableView];
     
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, [ZQHelper navBarHeight])];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kNavTitleBarHeight)];
     headerView.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = headerView;
 }

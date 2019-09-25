@@ -24,7 +24,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     ZQPhotoItemConfig *config = [[ZQPhotoItemConfig alloc] init];
-    config.style = ZQPhotoSelectStyleSingle;
+    config.style = ZQPhotoSelectStyleMore;
     
     [[ZQSystemPhotoAPI sharedAPI] showSystemPhoto:self config:config handler:^(NSArray<NSDictionary *> *imagesInfo) {
         NSLog(@"%@", imagesInfo);

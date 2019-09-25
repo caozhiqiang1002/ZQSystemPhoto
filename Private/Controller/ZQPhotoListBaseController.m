@@ -14,6 +14,7 @@
 #import "ZQCommonView.h"
 
 static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
+static NSString * const ZQ_Photo_FooterID = @"Photo_FooterID";
 
 @interface ZQPhotoListBaseController ()<UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, ZQDataSourceDelegate, ZQNavigationViewDelegate>
 @property (nonatomic, strong) ZQNavigationView *navigationView;
@@ -26,6 +27,13 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if (@available(iOS 11.0, *)) {
+        self.collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
     [self createDataSource];
     [self createCollectionView];
     [self createNavigationView];
@@ -68,9 +76,10 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
     layout.minimumInteritemSpacing = config.itemSpace;
     layout.sectionInset = UIEdgeInsetsMake(config.sectionSpace, config.sectionSpace, config.sectionSpace, config.sectionSpace);
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-kTabbarCustomHeight)
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
                                              collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.alwaysBounceVertical = YES;
     self.collectionView.dataSource = self.dataSource;
     self.collectionView.delegate = self;
     [self.view addSubview:self.collectionView];
@@ -116,6 +125,10 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
     [self.collectionView registerClass:[UICollectionReusableView class]
             forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                    withReuseIdentifier:ZQ_Photo_HeaderID];
+    
+    [self.collectionView registerClass:[UICollectionReusableView class]
+            forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                   withReuseIdentifier:ZQ_Photo_FooterID];
 }
 
 #pragma mark - Private
@@ -245,8 +258,12 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
                                                                                   withReuseIdentifier:ZQ_Photo_HeaderID forIndexPath:indexPath];
         headerView.backgroundColor = [UIColor clearColor];
         return headerView;
+    }else{
+        UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                                                                                  withReuseIdentifier:ZQ_Photo_FooterID forIndexPath:indexPath];
+        footerView.backgroundColor = [UIColor clearColor];
+        return footerView;
     }
-    return [[UICollectionReusableView alloc] init];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -266,7 +283,12 @@ static NSString * const ZQ_Photo_HeaderID = @"Photo_HeaderID";
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    return CGSizeMake(kScreenWidth, [ZQHelper navBarHeight]);
+    return CGSizeMake(kScreenWidth, kNavTitleBarHeight);
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    UIEdgeInsets safeInsets = [ZQHelper safeAreaInsetsForWindow];
+    return CGSizeMake(kScreenWidth, kTabbarCustomHeight + safeInsets.bottom);
 }
 
 #pragma mark - ZQNavigationViewDelegate

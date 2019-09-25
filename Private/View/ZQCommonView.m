@@ -205,7 +205,7 @@
 #pragma mark - Create UI
 
 - (void)createLeftLabel {
-    self.leftLabel = [UILabel labelWithFrame:CGRectMake(13, 0, 40, self.height)
+    self.leftLabel = [UILabel labelWithFrame:CGRectMake(13, 0, 40, kTabbarCustomHeight)
                                        title:self.title
                                         font:ZQFont(16.0f)
                                     selector:@selector(leftClick)
@@ -216,7 +216,7 @@
 }
 
 - (void)createRightLabel {
-    self.rightLabel = [UILabel labelWithFrame:CGRectMake(self.width-13-60, (self.height-30)/2, 60, 30)
+    self.rightLabel = [UILabel labelWithFrame:CGRectMake(self.width-13-60, (kTabbarCustomHeight-30)/2, 60, 30)
                                         title:@"完成"
                                          font:ZQFont(13.0f)
                                      selector:@selector(rightClick)
@@ -255,7 +255,12 @@
 + (ZQTabbarView *)tabbarViewWithTitle:(NSString *)title
                              delegate:(id<ZQTabbarViewDelegate>)delegate {
     
-    return [[self alloc] initWithFrame:CGRectMake(0, kScreenHeight-kTabbarCustomHeight, kScreenWidth, kTabbarCustomHeight)
+    UIEdgeInsets safeInsets = [ZQHelper safeAreaInsetsForWindow];
+    
+    return [[self alloc] initWithFrame:CGRectMake(0,
+                                                  kScreenHeight-safeInsets.bottom-kTabbarCustomHeight,
+                                                  kScreenWidth,
+                                                  kTabbarCustomHeight+safeInsets.bottom)
                                  title:title
                               delegate:delegate];;
 }
